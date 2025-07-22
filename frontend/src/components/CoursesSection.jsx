@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/Button";
 import { Star, Users, Clock, Heart } from "lucide-react";
 
 const courses = [

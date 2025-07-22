@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PricingSection from "@/components/PricingSection";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import PricingSection from "../components/PricingSection";
 
 const Pages = () => {
   return (

@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import AboutSection from "@/components/AboutSection";
-import StatsSection from "@/components/StatsSection";
-import InstructorsSection from "@/components/InstructorsSection";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import AboutSection from "../components/AboutSection";
+import StatsSection from "../components/StatsSection";
+import InstructorsSection from "../components/InstructorsSection";
 
 const About = () => {
   return (

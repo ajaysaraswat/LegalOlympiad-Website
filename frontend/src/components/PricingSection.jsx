@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/Button";
 import { Check, Database, Settings, Rocket } from "lucide-react";
 
 const plans = [

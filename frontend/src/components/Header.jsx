@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/Button";
 import {
   Menu,
   X,
@@ -29,9 +29,9 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-brand-cyan text-white py-2 px-4">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-          <div className="flex flex-col md:flex-row gap-4 mb-2 md:mb-0">
+      <div className="bg-brand-cyan text-white py-2 px-4 bg-black">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm ">
+          <div className="flex flex-col md:flex-row gap-4 mb-2 md:mb-0 ">
             <div className="flex items-center gap-2">
               <Phone size={16} />
               <span>974 8845246937</span>
@@ -63,7 +63,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-black shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -71,9 +71,7 @@ const Header = () => {
               <div className="w-10 h-10 bg-brand-cyan rounded-full flex items-center justify-center">
                 <div className="w-6 h-6 border-2 border-white rounded-full"></div>
               </div>
-              <span className="text-xl font-bold text-brand-navy">
-                ePATHSALA
-              </span>
+              <span className="text-xl font-bold text-white">ePATHSALA</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -82,11 +80,13 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-brand-cyan ${
-                    location.pathname === item.href
-                      ? "text-brand-cyan"
-                      : "text-gray-700"
-                  }`}
+                  className={`text-sm font-medium transition-colors duration-200
+                    ${
+                      location.pathname === item.href
+                        ? "text-white"
+                        : "text-white"
+                    }
+                    hover:text-orange-700`}
                 >
                   {item.name}
                 </Link>
@@ -112,10 +112,10 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-sm font-medium transition-colors hover:text-brand-cyan ${
+                    className={`text-sm font-medium transition-colors hover:text-white ${
                       location.pathname === item.href
-                        ? "text-brand-cyan"
-                        : "text-gray-700"
+                        ? "text-white"
+                        : "text-orange-800"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >

@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CoursesSection from "@/components/CoursesSection";
-import CategoriesSection from "@/components/CategoriesSection";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CoursesSection from "../components/CoursesSection";
+import CategoriesSection from "../components/CategoriesSection";
 
 const Courses = () => {
   return (

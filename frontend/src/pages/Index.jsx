@@ -1,16 +1,16 @@
-import Header from "@/components/Header";
-import HeroCarousel from "@/components/HeroCarousel";
-import FeatureCards from "@/components/FeatureCards";
-import AboutSection from "@/components/AboutSection";
-import StatsSection from "@/components/StatsSection";
-import CategoriesSection from "@/components/CategoriesSection";
-import CoursesSection from "@/components/CoursesSection";
-import InstructorsSection from "@/components/InstructorsSection";
-import PricingSection from "@/components/PricingSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import EventsSection from "@/components/EventsSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import Header from "../components/Header";
+import HeroCarousel from "../components/HeroCarousel";
+import FeatureCards from "../components/FeatureCards";
+import AboutSection from "../components/AboutSection";
+import StatsSection from "../components/StatsSection";
+import CategoriesSection from "../components/CategoriesSection";
+import CoursesSection from "../components/CoursesSection";
+import InstructorsSection from "../components/InstructorsSection";
+import PricingSection from "../components/PricingSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import EventsSection from "../components/EventsSection";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (

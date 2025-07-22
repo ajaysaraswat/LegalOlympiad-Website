@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import EventsSection from "@/components/EventsSection";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import EventsSection from "../components/EventsSection";
 
 const Events = () => {
   return (
