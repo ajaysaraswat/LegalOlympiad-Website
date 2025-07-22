@@ -1,30 +1,32 @@
 import { BarChart3, Video, Settings, Palette, Lightbulb } from "lucide-react";
 
-const categories = [
+const whyParticipate = [
   {
-    icon: BarChart3,
-    title: "BUSINESS & MANAGEMENT",
-    color: "text-brand-cyan",
+    title: "Bridge Knowledge & Passion",
+    description: "Step beyond books into real-life legal decision-making",
+    icon: "📚",
   },
   {
-    icon: Video,
-    title: "MOVIE FILM MAKING",
-    color: "text-brand-cyan",
+    title: "Discover Your Niche",
+    description:
+      "Explore multiple domains—Criminal, IP, Corporate, Cyber, Environmental, and more",
+    icon: "🔍",
   },
   {
-    icon: Settings,
-    title: "SOFTWARE TRAINING",
-    color: "text-brand-cyan",
+    title: "Personalized Scorecards",
+    description: "See where your strengths lie with domain-wise insights",
+    icon: "📊",
   },
   {
-    icon: Palette,
-    title: "GRAPHIC & WEB DESIGN",
-    color: "text-brand-cyan",
+    title: "Mentor Clinics",
+    description: "Post-test mentorship from senior advocates and legal experts",
+    icon: "🎓",
   },
   {
-    icon: Lightbulb,
-    title: "LOGICAL THINKING",
-    color: "text-brand-cyan",
+    title: "Recognition Beyond Trophies",
+    description:
+      "Scholarships, internships, and publishing opportunities in the Young Jurist compendium",
+    icon: "🏆",
   },
 ];
 
@@ -33,38 +35,28 @@ const CategoriesSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-gray-500 text-lg mb-4">Browse Categories</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
-            BROWSE ONLINE COURSE{" "}
-            <span className="text-brand-cyan">CATEGORIES</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+            Why Participate?
           </h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
+          <div className="w-24 h-1 bg-orange-800 mx-auto mt-4"></div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {categories.map((category, index) => {
-            const IconComponent = category.icon;
-            return (
-              <div
-                key={category.title}
-                className={`text-center p-8 rounded-lg hover:shadow-lg transition-all duration-300 group cursor-pointer fade-in-up stagger-${
-                  index + 1
-                }`}
-              >
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 bg-brand-light rounded-lg flex items-center justify-center group-hover:bg-brand-cyan transition-colors duration-300">
-                    <IconComponent
-                      size={32}
-                      className={`${category.color} group-hover:text-white transition-colors duration-300`}
-                    />
-                  </div>
-                </div>
-                <h3 className="text-base font-bold text-brand-navy group-hover:text-brand-cyan transition-colors duration-300">
-                  {category.title}
-                </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {whyParticipate.map((item, index) => (
+            <div
+              key={item.title}
+              className="bg-orange-800/5 border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+            >
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                {item.icon}
               </div>
-            );
-          })}
+              <h3 className="text-xl font-bold text-orange-800 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-black text-base opacity-90">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

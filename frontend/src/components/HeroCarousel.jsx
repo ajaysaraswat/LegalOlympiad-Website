@@ -5,11 +5,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    tagline: "LEARN ANYTHING, ANYTIME, ANYWHERE",
-    title: "BEST ONLINE LEARNING FOR YOUR FUTURE",
+    tagline: "Nyay ke Yodha Bano – Apna Raasta Khud Chuno",
+    title: "Legal Olympiad: Discover Your Legal Calling",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/lovable-uploads/331144fd-c148-49ea-9d4f-f9c39ac307bf.png",
+      "India doesn’t just need more lawyers—it needs bold, visionary legal minds. Every year, thousands of students enter law schools full of passion—but without direction. The Legal Olympiad was created to change that. This isn’t just an exam. It’s a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
+    image: "/hero1.jpg",
+    cta: "Join the Movement",
   },
   {
     id: 2,
@@ -17,7 +18,7 @@ const slides = [
     title: "TRANSFORM YOUR CAREER WITH EXPERT GUIDANCE",
     description:
       "Join thousands of students who have transformed their careers through our comprehensive online learning platform",
-    image: "/lovable-uploads/331144fd-c148-49ea-9d4f-f9c39ac307bf.png",
+    image: "/hero4.png",
   },
   {
     id: 3,
@@ -25,7 +26,7 @@ const slides = [
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
       "Access world-class education from industry professionals and take your skills to the next level",
-    image: "/lovable-uploads/331144fd-c148-49ea-9d4f-f9c39ac307bf.png",
+    image: "/hero3.jpg",
   },
 ];
 
@@ -68,14 +69,14 @@ const HeroCarousel = () => {
               : "translate-x-full"
           }`}
           style={{
-            background: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${slide.image})`,
+            background: `url(${slide.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-2xl slide-in-left">
-              <p className="text-brand-cyan text-lg font-medium mb-4">
+              <p className="text-orange-800 text-lg font-medium mb-4">
                 {slide.tagline}
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -87,14 +88,14 @@ const HeroCarousel = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-brand-cyan hover:bg-brand-cyan/90 text-white"
+                  className="bg-orange-800 hover:bg-orange-800/90 text-white"
                 >
                   VIEW COURSE
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-brand-navy"
+                  className="border-white text-white hover:text-orange-800 hover:bg-white"
                 >
                   GET STARTED
                 </Button>
@@ -129,7 +130,7 @@ const HeroCarousel = () => {
               setTimeout(() => setIsAutoPlay(true), 10000);
             }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? "bg-brand-cyan scale-125" : "bg-white/50"
+              index === currentSlide ? "bg-orange-800 scale-125" : "bg-white/50"
             }`}
           />
         ))}

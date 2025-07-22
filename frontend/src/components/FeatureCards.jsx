@@ -6,28 +6,28 @@ const features = [
     title: "SKILLED LECTURERS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    bgColor: "bg-gradient-to-br from-purple-500 to-blue-600",
+    bgColor: "bg-gradient-to-br from-orange-800 to-orange-600",
   },
   {
     icon: BookOpen,
     title: "BOOK LIBRARY",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    bgColor: "bg-gradient-to-br from-brand-cyan to-blue-500",
+    bgColor: "bg-gradient-to-br from-black to-gray-800",
   },
   {
     icon: Globe,
     title: "ONLINE CLASSES",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    bgColor: "bg-gradient-to-br from-blue-500 to-blue-600",
+    bgColor: "bg-gradient-to-br from-orange-800 to-orange-600",
   },
   {
     icon: Home,
     title: "HOME PROJECTS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    bgColor: "bg-gradient-to-br from-gray-600 to-gray-700",
+    bgColor: "bg-gradient-to-br from-black to-gray-800",
   },
 ];
 

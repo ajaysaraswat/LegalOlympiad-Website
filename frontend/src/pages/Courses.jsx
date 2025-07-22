@@ -9,7 +9,7 @@ const Courses = () => {
       <Header />
 
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-brand-cyan text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-800 to-orange-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="slide-in-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

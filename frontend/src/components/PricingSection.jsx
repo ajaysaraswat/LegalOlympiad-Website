@@ -15,8 +15,8 @@ const plans = [
       "Custom Categories",
       "Native courses in English",
     ],
-    buttonColor: "bg-brand-orange hover:bg-brand-orange/90",
-    textColor: "text-brand-orange",
+    buttonColor: "bg-orange-800 hover:bg-orange-800/90",
+    textColor: "text-orange-800",
     popular: false,
   },
   {
@@ -33,8 +33,8 @@ const plans = [
       "Native courses in all Languages",
       "24/7 customer support",
     ],
-    buttonColor: "bg-brand-cyan hover:bg-brand-cyan/90",
-    textColor: "text-brand-cyan",
+    buttonColor: "bg-orange-800 hover:bg-orange-800/90",
+    textColor: "text-orange-800",
     popular: true,
   },
   {
@@ -51,8 +51,8 @@ const plans = [
       "Native courses in all Languages",
       "24/7 customer support",
     ],
-    buttonColor: "bg-brand-navy hover:bg-brand-navy/90",
-    textColor: "text-brand-navy",
+    buttonColor: "bg-orange-800 hover:bg-orange-800/90",
+    textColor: "text-orange-800",
     popular: false,
   },
 ];
@@ -63,11 +63,11 @@ const PricingSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-gray-500 text-lg mb-4">Awesome Packages</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
             SIMPLE ALL INCLUSIVE{" "}
-            <span className="text-brand-cyan">PRICING</span>
+            <span className="text-orange-800">PRICING</span>
           </h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
+          <div className="w-24 h-1 bg-orange-800 mx-auto mt-8"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -77,11 +77,11 @@ const PricingSection = () => {
               <div
                 key={plan.name}
                 className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative ${
-                  plan.popular ? "scale-105 border-2 border-brand-cyan" : ""
+                  plan.popular ? "scale-105 border-2 border-orange-800" : ""
                 } fade-in-up stagger-${index + 1}`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-cyan text-white px-6 py-2 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-800 text-white px-6 py-2 rounded-full text-sm font-semibold">
                     Most Popular
                   </div>
                 )}
@@ -90,7 +90,7 @@ const PricingSection = () => {
                   <div className="mb-4 flex justify-center">
                     <div
                       className={`w-16 h-16 rounded-lg flex items-center justify-center ${
-                        plan.popular ? "bg-brand-cyan" : "bg-gray-100"
+                        plan.popular ? "bg-orange-800" : "bg-gray-100"
                       }`}
                     >
                       <IconComponent
@@ -115,7 +115,7 @@ const PricingSection = () => {
                     <span className={`text-4xl font-bold ${plan.textColor}`}>
                       {plan.price}
                     </span>
-                    <span className="text-sm text-brand-cyan ml-1">
+                    <span className="text-sm text-orange-800 ml-1">
                       {plan.period}
                     </span>
                   </div>

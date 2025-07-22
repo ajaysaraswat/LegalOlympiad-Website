@@ -2,22 +2,22 @@ const stats = [
   {
     number: "233+",
     label: "COURSES & VIDEOS",
-    color: "text-brand-orange",
+    color: "text-orange-800",
   },
   {
     number: "410+",
     label: "EXPERT TEACHERS",
-    color: "text-brand-orange",
+    color: "text-orange-800",
   },
   {
     number: "2299+",
     label: "TOTAL STUDENTS",
-    color: "text-brand-orange",
+    color: "text-orange-800",
   },
   {
     number: "368+",
     label: "CLASSES COMPLETE",
-    color: "text-brand-orange",
+    color: "text-orange-800",
   },
 ];
 
@@ -36,7 +36,7 @@ const StatsSection = () => {
               >
                 {stat.number}
               </div>
-              <div className="text-sm md:text-base font-semibold text-gray-700 tracking-wide">
+              <div className="text-sm md:text-base font-semibold text-black tracking-wide">
                 {stat.label}
               </div>
             </div>

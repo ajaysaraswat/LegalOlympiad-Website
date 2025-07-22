@@ -11,7 +11,7 @@ const Contact = () => {
       <Header />
 
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-brand-navy to-brand-cyan text-white">
+      <section className="py-20 bg-gradient-to-r from-black to-orange-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="slide-in-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="slide-in-left">
-              <h2 className="text-3xl font-bold text-brand-navy mb-8">
+              <h2 className="text-3xl font-bold text-black mb-8">
                 Send us a Message
               </h2>
               <form className="space-y-6">
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <Input placeholder="Subject" />
                 <Textarea placeholder="Your Message" rows={6} />
-                <Button className="bg-brand-cyan hover:bg-brand-cyan/90 text-white w-full md:w-auto">
+                <Button className="bg-orange-800 hover:bg-orange-800/90 text-white w-full md:w-auto">
                   Send Message
                 </Button>
               </form>
@@ -48,18 +48,16 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="slide-in-right">
-              <h2 className="text-3xl font-bold text-brand-navy mb-8">
+              <h2 className="text-3xl font-bold text-black mb-8">
                 Get in Touch
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-brand-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-navy mb-2">
-                      Address
-                    </h3>
+                    <h3 className="font-semibold text-black mb-2">Address</h3>
                     <p className="text-gray-600">
                       24th street, California, United States
                     </p>
@@ -67,26 +65,22 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-brand-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-navy mb-2">
-                      Phone
-                    </h3>
+                    <h3 className="font-semibold text-black mb-2">Phone</h3>
                     <p className="text-gray-600">+1 974 8845246937</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-brand-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-brand-navy mb-2">
-                      Email
-                    </h3>
-                    <p className="text-gray-600">info@epathsala.com</p>
+                    <h3 className="font-semibold text-black mb-2">Email</h3>
+                    <p className="text-gray-600">info@legalolympiad.com</p>
                   </div>
                 </div>
               </div>

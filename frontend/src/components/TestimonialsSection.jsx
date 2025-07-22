@@ -51,10 +51,10 @@ const TestimonialsSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
-            WHAT PEOPLE <span className="text-brand-cyan">SAY</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            WHAT PEOPLE <span className="text-orange-800">SAY</span>
           </h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
+          <div className="w-24 h-1 bg-orange-800 mx-auto mt-8"></div>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
                   }`}
                 >
                   {/* Quote Mark */}
-                  <div className="absolute top-4 right-6 text-6xl text-brand-light font-serif">
+                  <div className="absolute top-4 right-6 text-6xl text-gray-300 font-serif">
                     "
                   </div>
 
@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold text-brand-navy">
+                      <h4 className="font-bold text-black">
                         {testimonial.name}
                       </h4>
                       <p className={`text-sm ${testimonial.roleColor}`}>
@@ -124,7 +124,7 @@ const TestimonialsSection = () => {
                   onClick={() => setCurrentTestimonial(index * 2)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     Math.floor(currentTestimonial / 2) === index
-                      ? "bg-brand-cyan scale-125"
+                      ? "bg-orange-800 scale-125"
                       : "bg-gray-300"
                   }`}
                 />

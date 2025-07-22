@@ -5,7 +5,7 @@ const courses = [
   {
     id: 1,
     title: "DIGITAL MARKETING | SOCIAL MEDIA MARKETING BUSINESS",
-    image: "/lovable-uploads/dee8128e-d1e6-45e5-893b-92eab0c71560.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -14,7 +14,7 @@ const courses = [
   {
     id: 2,
     title: "BUILD BRAND INTO MARKETING: TACKLING NEW MARKETING",
-    image: "/lovable-uploads/dee8128e-d1e6-45e5-893b-92eab0c71560.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -23,7 +23,7 @@ const courses = [
   {
     id: 3,
     title: "CULTURE & STRATEGIES FOR A SUCCESSFUL BUSINESS",
-    image: "/lovable-uploads/dee8128e-d1e6-45e5-893b-92eab0c71560.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -32,7 +32,7 @@ const courses = [
   {
     id: 4,
     title: "GROW YOUR BUSINESS BY MASTERED IN SOME TECHNIQUE",
-    image: "/lovable-uploads/6b845e2f-a88f-414c-8e08-388833e56816.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -41,7 +41,7 @@ const courses = [
   {
     id: 5,
     title: "GROW UP AUDIENCE TO PROGRESS BUSINESS",
-    image: "/lovable-uploads/6b845e2f-a88f-414c-8e08-388833e56816.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -50,7 +50,7 @@ const courses = [
   {
     id: 6,
     title: "JAVA PROGRAMMING A-Z FULLY CLASSES WITH FULL TASK",
-    image: "/lovable-uploads/6b845e2f-a88f-414c-8e08-388833e56816.png",
+    image: "/lawcoll.jpg",
     rating: 4.5,
     reviews: 21,
     students: "2k+",
@@ -64,7 +64,7 @@ const CoursesSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
           <div className="slide-in-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               ALL COURSES OF EPATHSHALA
             </h2>
             <p className="text-gray-600 text-lg">
@@ -73,13 +73,13 @@ const CoursesSection = () => {
             </p>
           </div>
           <div className="slide-in-right mt-6 md:mt-0">
-            <Button className="bg-brand-cyan hover:bg-brand-cyan/90 text-white">
+            <Button className="bg-orange-800 hover:bg-orange-800/90 text-white">
               Read More
             </Button>
           </div>
         </div>
 
-        <div className="w-24 h-1 bg-brand-orange mb-12"></div>
+        <div className="w-24 h-1 bg-orange-800 mb-12"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
@@ -104,7 +104,7 @@ const CoursesSection = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-bold text-brand-navy mb-4 leading-tight group-hover:text-brand-cyan transition-colors duration-300">
+                <h3 className="text-lg font-bold text-black mb-4 leading-tight group-hover:text-orange-800 transition-colors duration-300">
                   {course.title}
                 </h3>
 
@@ -127,7 +127,7 @@ const CoursesSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-sm text-brand-cyan">
+                <div className="flex items-center justify-between text-sm text-orange-800">
                   <div className="flex items-center gap-1">
                     <Users size={16} />
                     <span>{course.students} Students</span>

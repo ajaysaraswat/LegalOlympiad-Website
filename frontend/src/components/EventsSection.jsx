@@ -7,7 +7,7 @@ const events = [
     date: "30 July",
     time: "9AM",
     location: "Melbourne",
-    image: "/lovable-uploads/7cb49b57-1680-4768-9c4d-034474bfc68b.png",
+    image: "/upcoming.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const events = [
     date: "30 July",
     time: "9AM",
     location: "Melbourne",
-    image: "/lovable-uploads/7cb49b57-1680-4768-9c4d-034474bfc68b.png",
+    image: "/upcoming.jpg",
   },
   {
     id: 3,
@@ -23,14 +23,110 @@ const events = [
     date: "30 July",
     time: "9AM",
     location: "Melbourne",
-    image: "/lovable-uploads/7cb49b57-1680-4768-9c4d-034474bfc68b.png",
+    image: "/upcoming.jpg",
+  },
+];
+
+const differentPoints = [
+  {
+    title: "Not just a quiz",
+    description: "A strategic simulation of real legal scenarios",
+    icon: "🧩",
+  },
+  {
+    title: "Not just prizes",
+    description: "Personalized guidance, recognition, and opportunities",
+    icon: "🎁",
+  },
+  {
+    title: "Not just one event",
+    description:
+      "A hybrid model spanning campus, regional, and national levels",
+    icon: "🌐",
+  },
+  {
+    title: "Not just rankings",
+    description: "A map to your ideal legal future",
+    icon: "🗺️",
+  },
+];
+
+const benefitsPoints = [
+  {
+    title: "Clarity in Specialization",
+    description: "Know your top-performing domains",
+    icon: "🔎",
+  },
+  {
+    title: "Skill Development",
+    description: "Legal reasoning, argument drafting, policy writing",
+    icon: "📝",
+  },
+  {
+    title: "Networking",
+    description: "With mentors, firms, legal startups & bar associations",
+    icon: "🤝",
+  },
+  {
+    title: "Career Launchpad",
+    description: "Internships, scholarships, and early exposure",
+    icon: "🚀",
   },
 ];
 
 const EventsSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
+        {/* What Makes the Legal Olympiad Different? */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
+            What Makes the Legal Olympiad Different?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {differentPoints.map((item) => (
+              <div
+                key={item.title}
+                className="bg-black border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white text-base opacity-90">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Benefits to Participants */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
+            Benefits to Participants
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefitsPoints.map((item) => (
+              <div
+                key={item.title}
+                className="bg-black border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white text-base opacity-90">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Existing events/competitions content follows here */}
         <div className="text-center mb-16">
           <p className="text-gray-500 text-lg mb-4">Our Events</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
