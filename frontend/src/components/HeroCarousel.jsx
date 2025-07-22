@@ -8,7 +8,7 @@ const slides = [
     tagline: "Nyay ke Yodha Bano – Apna Raasta Khud Chuno",
     title: "Legal Olympiad: Discover Your Legal Calling",
     description:
-      "India doesn’t just need more lawyers—it needs bold, visionary legal minds. Every year, thousands of students enter law schools full of passion—but without direction. The Legal Olympiad was created to change that. This isn’t just an exam. It’s a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
+      "India doesn’t just need more lawyers it needs bold, visionary legal minds. ",
     image: "/hero1.jpg",
     cta: "Join the Movement",
   },
@@ -17,7 +17,7 @@ const slides = [
     tagline: "UNLOCK YOUR POTENTIAL",
     title: "TRANSFORM YOUR CAREER WITH EXPERT GUIDANCE",
     description:
-      "Join thousands of students who have transformed their careers through our comprehensive online learning platform",
+      "Every year, thousands of students enter law schools full of passion but without direction. The Legal Olympiad was created to change that. This isn’t just an exam.",
     image: "/hero4.png",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     tagline: "LEARN FROM THE BEST",
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
-      "Access world-class education from industry professionals and take your skills to the next level",
+      " It’s a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
     image: "/hero3.jpg",
   },
 ];
