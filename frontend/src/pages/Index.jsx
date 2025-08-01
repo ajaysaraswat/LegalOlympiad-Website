@@ -23,7 +23,7 @@ const Index = () => {
       <CategoriesSection />
       <CoursesSection />
       <InstructorsSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <TestimonialsSection />
       <EventsSection />
       {/* <CTASection /> */}

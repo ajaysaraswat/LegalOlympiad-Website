@@ -60,12 +60,12 @@ const courses = [
 
 const CoursesSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
           <div className="slide-in-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              ALL COURSES OF EPATHSHALA
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              ALL COURSES OF LEGAL-O
             </h2>
             <p className="text-gray-600 text-lg">
               Online learning offers a new way to explore subjects you're
@@ -73,7 +73,7 @@ const CoursesSection = () => {
             </p>
           </div>
           <div className="slide-in-right mt-6 md:mt-0">
-            <Button className="bg-orange-800 hover:bg-orange-800/90 text-white">
+            <Button className="bg-[#ea4820] hover:bg-[#ea4820] text-white">
               Read More
             </Button>
           </div>

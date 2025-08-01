@@ -32,34 +32,77 @@ const whyParticipate = [
 
 const CategoriesSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
-            Why Participate?
-          </h2>
-          <div className="w-24 h-1 bg-orange-800 mx-auto mt-4"></div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whyParticipate.map((item, index) => (
+    <>
+      <style>
+        {`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}
+      </style>
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+              Why Participate?
+            </h2>
+            <div className="w-24 h-1 bg-[#ea4820] mx-auto mt-4"></div>
+          </div>
+
+          {/* Infinite scrolling container */}
+          <div className="relative overflow-hidden">
             <div
-              key={item.title}
-              className="bg-orange-800/5 border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              className="flex"
+              style={{
+                animation: "scroll 30s linear infinite",
+                width: "fit-content",
+              }}
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-orange-800 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-black text-base opacity-90">
-                {item.description}
-              </p>
+              {/* First set of cards */}
+              {whyParticipate.map((item, index) => (
+                <div
+                  key={`first-${item.title}`}
+                  className="flex-shrink-0 w-80 mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#ea4820] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-black text-base opacity-90">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+
+              {/* Duplicate set for seamless infinite scroll */}
+              {whyParticipate.map((item, index) => (
+                <div
+                  key={`second-${item.title}`}
+                  className="flex-shrink-0 w-80 mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#ea4820] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-black text-base opacity-90">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
