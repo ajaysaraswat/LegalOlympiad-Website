@@ -30,60 +30,66 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-black text-white py-2 px-4">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm ">
-          <div className="flex flex-col md:flex-row gap-4 mb-2 md:mb-0 ">
-            <div className="flex items-center gap-2">
-              <Phone size={16} />
-              <span>974 8845246937</span>
+      {/* <div className="bg-black text-white py-2 px-4">
+        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-2 sm:mb-0">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Phone size={14} className="sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm">974 8845246937</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Mail size={16} />
-              <span>info@legalolympiad.com</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Mail size={14} className="sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm hidden sm:inline">
+                info@legalolympiad.com
+              </span>
+              <span className="text-xs sm:hidden">info@legalolympiad.com</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin size={16} />
-              <span>24th street, California</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <MapPin size={14} className="sm:w-4 sm:h-4" />
+              <span className="text-xs sm:text-sm hidden sm:inline">
+                24th street, California
+              </span>
+              <span className="text-xs sm:hidden">California</span>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2 sm:gap-3">
             <Facebook
-              size={16}
-              className="hover:scale-110 transition-transform cursor-pointer"
+              size={14}
+              className="sm:w-4 sm:h-4 hover:scale-110 transition-transform cursor-pointer"
             />
             <Instagram
-              size={16}
-              className="hover:scale-110 transition-transform cursor-pointer"
+              size={14}
+              className="sm:w-4 sm:h-4 hover:scale-110 transition-transform cursor-pointer"
             />
             <Twitter
-              size={16}
-              className="hover:scale-110 transition-transform cursor-pointer"
+              size={14}
+              className="sm:w-4 sm:h-4 hover:scale-110 transition-transform cursor-pointer"
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Header */}
       <header className="bg-black shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-orange-800 rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 border-2 border-white rounded-full"></div>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-800 rounded-full flex items-center justify-center">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full"></div>
               </div>
-              <span className="text-xl font-bold text-white">
+              <span className="text-lg sm:text-xl font-bold text-white">
                 LegalOlympiad
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors duration-200 text-white hover:text-orange-800`}
+                  className={`text-xs xl:text-sm font-medium transition-colors duration-200 text-white hover:text-orange-800`}
                 >
                   {item.name}
                 </Link>
@@ -94,22 +100,22 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-orange-800"
+              className="lg:hidden text-orange-800 p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden border-t bg-black absolute left-0 right-0 top-full shadow-lg">
-              <nav className="flex flex-col space-y-4 p-4">
+            <div className="lg:hidden border-t border-gray-700 bg-black absolute left-0 right-0 top-full shadow-lg">
+              <nav className="flex flex-col space-y-0 p-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-sm font-medium transition-colors text-white hover:text-orange-800`}
+                    className={`text-sm font-medium transition-colors text-white hover:text-orange-800 py-3 px-4 border-b border-gray-700 last:border-b-0`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

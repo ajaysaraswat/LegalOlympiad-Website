@@ -8,7 +8,7 @@ const slides = [
     tagline: "Nyay ke Yodha Bano – Apna Raasta Khud Chuno",
     title: "Legal Olympiad: Discover Your Legal Calling",
     description:
-      "India doesn’t just need more lawyers it needs bold, visionary legal minds. ",
+      "India doesn't just need more lawyers it needs bold, visionary legal minds. ",
     image: "/hero1.jpg",
     cta: "Join the Movement",
   },
@@ -17,7 +17,7 @@ const slides = [
     tagline: "UNLOCK YOUR POTENTIAL",
     title: "TRANSFORM YOUR CAREER WITH EXPERT GUIDANCE",
     description:
-      "Every year, thousands of students enter law schools full of passion but without direction. The Legal Olympiad was created to change that. This isn’t just an exam.",
+      "Every year, thousands of students enter law schools full of passion but without direction. The Legal Olympiad was created to change that. This isn't just an exam.",
     image: "/hero4.png",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
     tagline: "LEARN FROM THE BEST",
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
-      " It’s a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
+      " It's a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
     image: "/hero3.jpg",
   },
 ];
@@ -57,7 +57,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -75,27 +75,27 @@ const HeroCarousel = () => {
           }}
         >
           <div className="container mx-auto px-4 h-full flex items-center">
-            <div className="text-white max-w-2xl slide-in-left">
-              <p className="text-orange-800 text-lg font-medium mb-4">
+            <div className="text-white max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl slide-in-left">
+              <p className="text-orange-800 text-sm sm:text-base md:text-lg font-medium mb-2 sm:mb-4">
                 {slide.tagline}
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
                 {slide.title}
               </h1>
-              <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-8 leading-relaxed opacity-90">
                 {slide.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-row gap-3 sm:gap-4">
                 <Button
-                  size="lg"
-                  className="bg-orange-800 hover:bg-orange-800/90 text-white"
+                  size="sm"
+                  className="bg-orange-800 hover:bg-orange-800/90 text-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                 >
                   VIEW COURSE
                 </Button>
                 <Button
-                  size="lg"
+                  size="sm"
                   variant="outline"
-                  className="border-white text-white hover:text-orange-800 hover:bg-white"
+                  className="border-white text-white hover:text-orange-800 hover:bg-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                 >
                   GET STARTED
                 </Button>
@@ -108,19 +108,19 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-all duration-300"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-all duration-300"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={20} className="sm:w-6 sm:h-6" />
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -129,7 +129,7 @@ const HeroCarousel = () => {
               setIsAutoPlay(false);
               setTimeout(() => setIsAutoPlay(true), 10000);
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? "bg-orange-800 scale-125" : "bg-white/50"
             }`}
           />

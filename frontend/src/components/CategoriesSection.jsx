@@ -45,13 +45,13 @@ const CategoriesSection = () => {
           }
         `}
       </style>
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
               Why Participate?
             </h2>
-            <div className="w-24 h-1 bg-[#ea4820] mx-auto mt-4"></div>
+            <div className="w-16 sm:w-24 h-1 bg-[#ea4820] mx-auto mt-3 sm:mt-4"></div>
           </div>
 
           {/* Infinite scrolling container */}
@@ -67,15 +67,15 @@ const CategoriesSection = () => {
               {whyParticipate.map((item, index) => (
                 <div
                   key={`first-${item.title}`}
-                  className="flex-shrink-0 w-80 mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+                  className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#ea4820] mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-black text-base opacity-90">
+                  <p className="text-sm sm:text-base text-black opacity-90">
                     {item.description}
                   </p>
                 </div>
@@ -85,15 +85,15 @@ const CategoriesSection = () => {
               {whyParticipate.map((item, index) => (
                 <div
                   key={`second-${item.title}`}
-                  className="flex-shrink-0 w-80 mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+                  className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#ea4820] mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-black text-base opacity-90">
+                  <p className="text-sm sm:text-base text-black opacity-90">
                     {item.description}
                   </p>
                 </div>

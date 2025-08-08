@@ -33,9 +33,9 @@ const features = [
 
 const FeatureCards = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 sm:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -43,15 +43,20 @@ const FeatureCards = () => {
                 key={feature.title}
                 className={`${
                   feature.bgColor
-                } text-white p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up stagger-${
+                } text-white p-6 sm:p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up stagger-${
                   index + 1
                 }`}
               >
-                <div className="mb-6 flex justify-center">
-                  <IconComponent size={48} className="text-white" />
+                <div className="mb-4 sm:mb-6 flex justify-center">
+                  <IconComponent
+                    size={36}
+                    className="sm:w-12 sm:h-12 text-white"
+                  />
                 </div>
-                <h3 className="text-lg font-bold mb-4">{feature.title}</h3>
-                <p className="text-sm opacity-90 leading-relaxed">
+                <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-xs sm:text-sm opacity-90 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

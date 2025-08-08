@@ -60,28 +60,28 @@ const courses = [
 
 const CoursesSection = () => {
   return (
-    <section className="py-20 bg-black">
+    <section className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 sm:mb-16">
           <div className="slide-in-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               ALL COURSES OF LEGAL-O
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-sm sm:text-base md:text-lg text-gray-400 sm:text-gray-600">
               Online learning offers a new way to explore subjects you're
               passionate about.
             </p>
           </div>
-          <div className="slide-in-right mt-6 md:mt-0">
-            <Button className="bg-[#ea4820] hover:bg-[#ea4820] text-white">
+          <div className="slide-in-right mt-4 sm:mt-6 md:mt-0">
+            <Button className="bg-[#ea4820] hover:bg-[#ea4820] text-white text-xs sm:text-sm">
               Read More
             </Button>
           </div>
         </div>
 
-        <div className="w-24 h-1 bg-orange-800 mb-12"></div>
+        <div className="w-16 sm:w-24 h-1 bg-orange-800 mb-8 sm:mb-12"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {courses.map((course, index) => (
             <div
               key={course.id}
@@ -93,31 +93,31 @@ const CoursesSection = () => {
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <button className="absolute top-4 right-4 bg-white/90 hover:bg-white p-2 rounded-full transition-colors duration-300">
+                <button className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white p-1.5 sm:p-2 rounded-full transition-colors duration-300">
                   <Heart
-                    size={16}
-                    className="text-gray-600 hover:text-red-500"
+                    size={14}
+                    className="sm:w-4 sm:h-4 text-gray-600 hover:text-red-500"
                   />
                 </button>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-4 leading-tight group-hover:text-orange-800 transition-colors duration-300">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-black mb-3 sm:mb-4 leading-tight group-hover:text-orange-800 transition-colors duration-300">
                   {course.title}
                 </h3>
 
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-gray-600">
+                <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                  <span className="text-xs sm:text-sm text-gray-600">
                     {course.reviews} Reviews
                   </span>
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        size={16}
-                        className={`${
+                        size={12}
+                        className={`sm:w-4 sm:h-4 ${
                           i < Math.floor(course.rating)
                             ? "text-yellow-400 fill-current"
                             : "text-gray-300"
@@ -127,17 +127,17 @@ const CoursesSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-sm text-orange-800">
+                <div className="flex items-center justify-between text-xs sm:text-sm text-orange-800">
                   <div className="flex items-center gap-1">
-                    <Users size={16} />
+                    <Users size={12} className="sm:w-4 sm:h-4" />
                     <span>{course.students} Students</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Clock size={16} />
+                    <Clock size={12} className="sm:w-4 sm:h-4" />
                     <span>{course.duration}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Star size={16} />
+                    <Star size={12} className="sm:w-4 sm:h-4" />
                     <span>{course.rating} Reviews</span>
                   </div>
                 </div>
