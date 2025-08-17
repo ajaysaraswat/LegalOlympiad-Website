@@ -12,20 +12,24 @@ const AboutSection = () => {
             </h2>
             <div className="w-12 sm:w-16 h-1 bg-orange-800 mb-6 sm:mb-8"></div>
             <p className="text-sm sm:text-base text-black mb-4 sm:mb-6">
-              The Legal Olympiad is India's launchpad for bold, visionary legal
-              minds. More than an exam, it's a battlefield of ideas and a
-              launchpad for changemakers. Through real-world simulations and
-              mentorship, we help students discover where they truly belong in
-              the legal landscape.
+              The Legal Olympiad is more than a competition, it’s a launchpad
+              for law students to discover their specialization, build critical
+              skills, and connect with mentors. Through assessments,
+              simulations, and AI-driven career mapping, LegalO prepares
+              future-ready lawyers for India and beyond.
             </p>
             <div className="mb-6 sm:mb-8">
               <h3 className="text-lg sm:text-xl font-bold text-orange-800 mb-2">
                 Mission Statement
               </h3>
               <p className="text-sm sm:text-base text-black">
-                To transform India's legal education system into a dynamic,
+                To transform India’s legal education system into a dynamic,
                 accessible, and future-ready ecosystem that cultivates critical
-                thinking, ethical practice, and purpose-driven leadership.
+                thinking, ethical practice, and purpose-driven leadership. By
+                bridging theory with practice through mentorship,
+                interdisciplinary learning, and real-world exposure, we aim to
+                empower law students to use the law as a tool for justice,
+                innovation, and nation-building.
               </p>
             </div>
             {/* <div className="bg-orange-800 text-white p-8 rounded-lg text-center flex flex-col items-center">

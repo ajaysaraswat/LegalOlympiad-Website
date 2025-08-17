@@ -1,32 +1,32 @@
-import { User, BookOpen, Globe, Home } from "lucide-react";
+import { Award, Users, Gavel, FileText } from "lucide-react";
 
 const features = [
   {
-    icon: User,
-    title: "SKILLED LECTURERS",
+    icon: Award,
+    title: "Why LegalO",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "India's first national-level Legal Olympiad bridging the gap between theory and practice, empowering students with real-world legal skills and career direction.",
     bgColor: "bg-gradient-to-br from-orange-800 to-orange-600",
   },
   {
-    icon: BookOpen,
-    title: "BOOK LIBRARY",
+    icon: Users,
+    title: "Consulting Forum from Law Experts",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Gain direct mentorship from serving and retired judges, senior advocates, lawyers, and professors to guide your legal journey.",
     bgColor: "bg-gradient-to-br from-black to-gray-800",
   },
   {
-    icon: Globe,
-    title: "ONLINE CLASSES",
+    icon: Gavel,
+    title: "Court Craft",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Practical training in courtroom skills, advocacy, and legal procedures through immersive simulations and workshops.",
     bgColor: "bg-gradient-to-br from-orange-800 to-orange-600",
   },
   {
-    icon: Home,
-    title: "HOME PROJECTS",
+    icon: FileText,
+    title: "Judgement Appreciation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "Deepen your legal reasoning by critically analyzing landmark judgments and understanding their real-world impact.",
     bgColor: "bg-gradient-to-br from-black to-gray-800",
   },
 ];

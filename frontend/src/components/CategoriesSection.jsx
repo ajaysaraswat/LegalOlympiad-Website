@@ -1,32 +1,49 @@
-import { BarChart3, Video, Settings, Palette, Lightbulb } from "lucide-react";
+import {
+  BookOpen,
+  Search,
+  BarChart3,
+  GraduationCap,
+  Trophy,
+  Scale,
+  Target,
+  FileText,
+  Users,
+  Star,
+} from "lucide-react";
 
 const whyParticipate = [
   {
     title: "Bridge Knowledge & Passion",
-    description: "Step beyond books into real-life legal decision-making",
-    icon: "📚",
+    description:
+      "Bridge knowledge & passion through real legal problem-solving.",
+    icon: Scale,
+    color: "text-blue-600",
   },
   {
     title: "Discover Your Niche",
     description:
-      "Explore multiple domains—Criminal, IP, Corporate, Cyber, Environmental, and more",
-    icon: "🔍",
+      "Discover your niche in criminal, corporate, IP, cyber, and environmental law.",
+    icon: Search,
+    color: "text-green-600",
   },
   {
     title: "Personalized Scorecards",
-    description: "See where your strengths lie with domain-wise insights",
-    icon: "📊",
+    description: "Receive personalized scorecards highlighting your strengths.",
+    icon: BarChart3,
+    color: "text-purple-600",
   },
   {
     title: "Mentor Clinics",
-    description: "Post-test mentorship from senior advocates and legal experts",
-    icon: "🎓",
+    description: "Access post-test mentor clinics with senior legal experts.",
+    icon: GraduationCap,
+    color: "text-orange-600",
   },
   {
     title: "Recognition Beyond Trophies",
     description:
-      "Scholarships, internships, and publishing opportunities in the Young Jurist compendium",
-    icon: "🏆",
+      "Win recognition through scholarships, internships, and publications.",
+    icon: Trophy,
+    color: "text-red-600",
   },
 ];
 
@@ -64,40 +81,56 @@ const CategoriesSection = () => {
               }}
             >
               {/* First set of cards */}
-              {whyParticipate.map((item, index) => (
-                <div
-                  key={`first-${item.title}`}
-                  className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                    {item.icon}
+              {whyParticipate.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={`first-${item.title}`}
+                    className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-[#ea4820]/30 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl transition-all duration-500 group hover:border-[#ea4820]/50 hover:scale-105"
+                  >
+                    <div
+                      className={`mb-4 sm:mb-6 p-4 rounded-full bg-gradient-to-br from-[#ea4820]/10 to-[#ea4820]/5 group-hover:from-[#ea4820]/20 group-hover:to-[#ea4820]/10 transition-all duration-300`}
+                    >
+                      <IconComponent
+                        size={40}
+                        className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
+                      />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-3 group-hover:text-[#ea4820]/80 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-black opacity-90">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
 
               {/* Duplicate set for seamless infinite scroll */}
-              {whyParticipate.map((item, index) => (
-                <div
-                  key={`second-${item.title}`}
-                  className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-[#ea4820]/5 border border-[#ea4820] rounded-xl p-6 sm:p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
-                >
-                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                    {item.icon}
+              {whyParticipate.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={`second-${item.title}`}
+                    className="flex-shrink-0 w-64 sm:w-80 mx-2 sm:mx-4 bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-[#ea4820]/30 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl transition-all duration-500 group hover:border-[#ea4820]/50 hover:scale-105"
+                  >
+                    <div
+                      className={`mb-4 sm:mb-6 p-4 rounded-full bg-gradient-to-br from-[#ea4820]/10 to-[#ea4820]/5 group-hover:from-[#ea4820]/20 group-hover:to-[#ea4820]/10 transition-all duration-300`}
+                    >
+                      <IconComponent
+                        size={40}
+                        className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
+                      />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-3 group-hover:text-[#ea4820]/80 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-black opacity-90">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

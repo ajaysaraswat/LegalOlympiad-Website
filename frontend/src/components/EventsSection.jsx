@@ -1,4 +1,13 @@
-import { Calendar, Clock, MapPin } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Target,
+  Briefcase,
+  Users,
+  Award,
+  Star,
+} from "lucide-react";
 
 const events = [
   {
@@ -53,24 +62,30 @@ const differentPoints = [
 
 const benefitsPoints = [
   {
-    title: "Clarity in Specialization",
-    description: "Know your top-performing domains",
-    icon: "🔎",
+    title: "Clarity in Specialization & Career Path",
+    description:
+      "Discover your strengths and find your ideal legal specialization",
+    icon: Target,
   },
   {
-    title: "Skill Development",
-    description: "Legal reasoning, argument drafting, policy writing",
-    icon: "📝",
+    title: "Real-world Skill Development",
+    description: "Develop practical legal skills through hands-on experience",
+    icon: Briefcase,
   },
   {
-    title: "Networking",
-    description: "With mentors, firms, legal startups & bar associations",
-    icon: "🤝",
+    title: "Networking with Top Legal Professionals",
+    description: "Connect with judges, advocates, and industry leaders",
+    icon: Users,
   },
   {
-    title: "Career Launchpad",
-    description: "Internships, scholarships, and early exposure",
-    icon: "🚀",
+    title: "Career Launchpad with Internship Opportunities",
+    description: "Access exclusive internships and career opportunities",
+    icon: Award,
+  },
+  {
+    title: "National Recognition for CV & Job Applications",
+    description: "Boost your profile with nationally recognized achievements",
+    icon: Star,
   },
 ];
 
@@ -79,7 +94,7 @@ const EventsSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* What Makes the Legal Olympiad Different? */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
             What Makes the Legal Olympiad Different?
           </h2>
@@ -101,29 +116,35 @@ const EventsSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         {/* Benefits to Participants */}
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
-            Benefits to Participants
+            Benefits to Students
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefitsPoints.map((item) => (
-              <div
-                key={item.title}
-                className="bg-black border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {benefitsPoints.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="bg-black border border-[#ea4820] rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105"
+                >
+                  <div className="mb-4 p-3 bg-[#ea4820]/10 rounded-full group-hover:bg-[#ea4820]/20 transition-colors duration-300">
+                    <IconComponent
+                      size={32}
+                      className="text-[#ea4820] group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-[#ea4820] mb-2 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-white text-sm opacity-90 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-orange-800 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-white text-base opacity-90">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         {/* Existing events/competitions content follows here */}

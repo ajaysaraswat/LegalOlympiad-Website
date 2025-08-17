@@ -18,7 +18,7 @@ const slides = [
     title: "TRANSFORM YOUR CAREER WITH EXPERT GUIDANCE",
     description:
       "Every year, thousands of students enter law schools full of passion but without direction. The Legal Olympiad was created to change that. This isn't just an exam.",
-    image: "/hero4.png",
+    image: "/studentlaw.png",
   },
   {
     id: 3,

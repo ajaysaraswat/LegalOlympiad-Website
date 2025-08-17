@@ -1,22 +1,22 @@
 const stats = [
   {
-    number: "233+",
-    label: "COURSES & VIDEOS",
+    number: "200+",
+    label: "Years of legal experience onboard",
     color: "text-orange-800",
   },
   {
-    number: "410+",
-    label: "EXPERT TEACHERS",
+    number: "100+",
+    label: " Years of technology experience onboard",
     color: "text-orange-800",
   },
   {
-    number: "2299+",
-    label: "TOTAL STUDENTS",
+    number: "30+",
+    label: "Expert Professors",
     color: "text-orange-800",
   },
   {
-    number: "368+",
-    label: "CLASSES COMPLETE",
+    number: "50+",
+    label: "Mentors",
     color: "text-orange-800",
   },
 ];

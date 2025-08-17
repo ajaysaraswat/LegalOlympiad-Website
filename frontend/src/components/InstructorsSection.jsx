@@ -1,31 +1,59 @@
 const instructors = [
   {
     id: 1,
-    name: "William Smith",
-    role: "CEO / Founder",
+    name: "Vineet Sharma",
+    role: "Founder & CEO",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-orange-800",
+    roleColor: "text-[#ea4820]",
   },
   {
     id: 2,
-    name: "Nicole Kiyl",
-    role: "Project Manager",
-    image: "/lawyer_photo.jpg",
-    roleColor: "text-orange-800",
+    name: "Sanjana Wadhwa",
+    role: "Legal Director",
+    image: "/judge.jpg",
+    roleColor: "text-[#ea4820]",
   },
   {
     id: 3,
-    name: "John Melton",
-    role: "Instructor",
+    name: "Siraj Abbasi",
+    role: "Head of Operations",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-orange-800",
+    roleColor: "text-[#ea4820]",
   },
   {
     id: 4,
-    name: "Ketti Helson",
-    role: "Business Analyst",
+    name: "Adnan Abbasi",
+    role: "Technology Lead",
+    image: "/lawyer_photo.jpg",
+    roleColor: "text-[#ea4820]",
+  },
+  {
+    id: 5,
+    name: "Praveen Sharma",
+    role: "Academic Coordinator",
     image: "/judge.jpg",
-    roleColor: "text-orange-800",
+    roleColor: "text-[#ea4820]",
+  },
+  {
+    id: 6,
+    name: "Vikas Gogne",
+    role: "Mentorship Director",
+    image: "/lawyer_photo.jpg",
+    roleColor: "text-[#ea4820]",
+  },
+  {
+    id: 7,
+    name: "Satyam Chaturvedi",
+    role: "Content & Curriculum Lead",
+    image: "/lawyer_photo.jpg",
+    roleColor: "text-[#ea4820]",
+  },
+  {
+    id: 8,
+    name: "Tithika Mittal",
+    role: "Student Relations Manager",
+    image: "/judge.jpg",
+    roleColor: "text-[#ea4820]",
   },
 ];
 
@@ -35,14 +63,13 @@ const InstructorsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
-            The Team Behind the Olympiad
+            Meet Our Leadership Team
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-black max-w-5xl mx-auto">
-            The Legal Olympiad is curated by a panel of distinguished legal
-            professionals and academicians, collectively contributing over 200
-            years of legal wisdom. Their mission is to mentor, guide, and shape
-            future legal leaders who don't just serve the system but transform
-            it.
+            The Legal Olympiad is led by a dedicated team of legal
+            professionals, educators, and innovators committed to transforming
+            legal education. Together, we bring diverse expertise to create
+            India's premier legal career development platform.
           </p>
         </div>
 
