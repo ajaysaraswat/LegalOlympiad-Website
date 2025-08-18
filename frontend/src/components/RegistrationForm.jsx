@@ -600,7 +600,7 @@ const RegistrationForm = () => {
                     });
                     setErrors({});
                   }}
-                  className="flex-1"
+                  className="flex-1 text-white"
                 >
                   Reset Form
                 </Button>

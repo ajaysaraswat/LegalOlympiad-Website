@@ -97,7 +97,10 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navigation.map((item) => (
-                <div key={item.name} className="relative group">
+                <div
+                  key={item.name}
+                  className="relative group flex items-center"
+                >
                   {item.hasDropdown ? (
                     <>
                       <div className="flex items-center gap-1 cursor-pointer">
@@ -133,7 +136,7 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`text-xs xl:text-sm font-medium transition-colors duration-200 text-white hover:text-orange-800`}
+                      className={`text-xs xl:text-sm font-medium transition-colors duration-200 text-white hover:text-orange-800 flex items-center`}
                     >
                       {item.name}
                     </Link>

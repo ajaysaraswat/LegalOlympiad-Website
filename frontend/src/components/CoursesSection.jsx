@@ -84,7 +84,7 @@ const ServicesSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               SERVICES WE OFFER
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-400 sm:text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg text-white sm:text-white">
               Comprehensive legal services designed to empower your legal career
               journey.
             </p>
