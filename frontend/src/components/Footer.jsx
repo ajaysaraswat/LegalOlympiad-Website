@@ -240,7 +240,8 @@ const Footer = () => {
                   className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
                 />
                 <span className="text-xs sm:text-sm text-gray-300">
-                  24th street, California, United States
+                  Address: C-18, Second floor, Pamposh Enclave,New Delhi -
+                  110048
                 </span>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">

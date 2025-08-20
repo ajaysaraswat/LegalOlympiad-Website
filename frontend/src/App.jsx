@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Pages from "./pages/Pages";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 // LegalO Pages
 // import Olympiad from "./pages/LegalO/Olympiad";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/pages" element={<Pages />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
           {/* LegalO Routes */}
           {/* <Route path="/legal-o/olympiad" element={<Olympiad />} />

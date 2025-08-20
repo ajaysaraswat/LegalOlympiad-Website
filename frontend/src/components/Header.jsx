@@ -85,14 +85,17 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#ea4820] rounded-full flex items-center justify-center">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full"></div>
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-white">
-                LegalOlympiad
-              </span>
-            </Link>
+
+            <div className="flex-shrink-0 cursor-pointer">
+              <img
+                src="/legelLogo.png"
+                alt="Instrek Logo"
+                className="h-20 w-25 pl-4 lg:pl-0.5 object-contain"
+                loading="eager"
+                width="100"
+                height="80"
+              />
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
