@@ -6,11 +6,27 @@ import {
   Instagram,
   Twitter,
   ArrowUp,
+  Linkedin,
+  Youtube,
 } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleLinkClick = () => {
+    // If we're already on the same page, scroll to top
+    if (location.pathname === window.location.pathname) {
+      scrollToTop();
+    }
+    // If navigating to a different page, scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   return (
@@ -20,7 +36,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="slide-in-left">
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-800 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#ea4820] rounded-full flex items-center justify-center">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full"></div>
               </div>
               <span className="text-lg sm:text-xl font-bold">
@@ -28,22 +44,61 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-6">
-              Transform your future with our comprehensive online learning
-              platform. Learn from industry experts and advance your career.
+              India's first national-level Legal Olympiad bridging the gap
+              between theory and practice, empowering students with real-world
+              legal skills and career direction.
             </p>
             <div className="flex gap-3 sm:gap-4">
-              <Facebook
-                size={18}
-                className="sm:w-5 sm:h-5 hover:text-orange-800 cursor-pointer transition-colors"
-              />
-              <Instagram
-                size={18}
-                className="sm:w-5 sm:h-5 hover:text-orange-800 cursor-pointer transition-colors"
-              />
-              <Twitter
-                size={18}
-                className="sm:w-5 sm:h-5 hover:text-orange-800 cursor-pointer transition-colors"
-              />
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook
+                  size={18}
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram
+                  size={18}
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter
+                  size={18}
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin
+                  size={18}
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube
+                  size={18}
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                />
+              </a>
             </div>
           </div>
 
@@ -54,96 +109,124 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href="/"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/about"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/about"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/courses"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/courses"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Courses
-                </a>
+                  Legal-O Services
+                </Link>
               </li>
               <li>
-                <a
-                  href="/events"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/events"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Events
-                </a>
+                  Upcoming Events
+                </Link>
               </li>
               <li>
-                <a
-                  href="/blog"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/register"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Blog
-                </a>
+                  Subscription
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Courses */}
-          {/* <div className="slide-in-right stagger-2">
+          {/* Legal-O Services */}
+          <div className="slide-in-right stagger-2">
             <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
-              Popular Courses
+              Legal-O Services
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href="#"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/legal-o/olympiad"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Digital Marketing
-                </a>
+                  Legal Olympiad
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/legal-o/ai-tools"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Web Development
-                </a>
+                  AI Tools
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/legal-o/podcasts"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Graphic Design
-                </a>
+                  Legal Podcasts
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/legal-o/find-mentor"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Business Management
-                </a>
+                  Find a Mentor
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-sm sm:text-base text-gray-300 hover:text-orange-800 transition-colors"
+                <Link
+                  to="/legal-o/subjects"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
-                  Data Science
-                </a>
+                  Subjects for Tomorrow
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/legal-o/mentoring"
+                  onClick={handleLinkClick}
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                >
+                  Mentoring Sessions
+                </Link>
               </li>
             </ul>
-          </div> */}
+          </div>
 
           {/* Contact Info */}
           <div className="slide-in-right">
@@ -154,7 +237,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 sm:gap-3">
                 <MapPin
                   size={16}
-                  className="sm:w-5 sm:h-5 text-orange-800 mt-1 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
                 />
                 <span className="text-xs sm:text-sm text-gray-300">
                   24th street, California, United States
@@ -163,20 +246,26 @@ const Footer = () => {
               <div className="flex items-center gap-2 sm:gap-3">
                 <Phone
                   size={16}
-                  className="sm:w-5 sm:h-5 text-orange-800 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#ea4820] flex-shrink-0"
                 />
-                <span className="text-xs sm:text-sm text-gray-300">
+                <a
+                  href="tel:+19748845246937"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+                >
                   +1 974 8845246937
-                </span>
+                </a>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <Mail
                   size={16}
-                  className="sm:w-5 sm:h-5 text-orange-800 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#ea4820] flex-shrink-0"
                 />
-                <span className="text-xs sm:text-sm text-gray-300">
+                <a
+                  href="mailto:info@legalolympiad.com"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+                >
                   info@legalolympiad.com
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -189,20 +278,20 @@ const Footer = () => {
           </p>
           <div className="flex gap-4 sm:gap-6 mt-3 sm:mt-0">
             <a
-              href="#"
-              className="text-xs sm:text-sm text-gray-300 hover:text-orange-800 transition-colors"
+              href="/privacy-policy"
+              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
-              className="text-xs sm:text-sm text-gray-300 hover:text-orange-800 transition-colors"
+              href="/terms-of-service"
+              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
             >
               Terms of Service
             </a>
             <a
-              href="#"
-              className="text-xs sm:text-sm text-gray-300 hover:text-orange-800 transition-colors"
+              href="/support"
+              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
             >
               Support
             </a>
@@ -213,7 +302,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-orange-800 hover:bg-orange-800/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-[#ea4820] hover:bg-[#ea4820]/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
       >
         <ArrowUp size={16} className="sm:w-5 sm:h-5" />
       </button>

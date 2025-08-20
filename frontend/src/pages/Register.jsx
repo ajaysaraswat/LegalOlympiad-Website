@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import RegistrationForm from "../components/RegistrationForm";
 import Footer from "../components/Footer";
@@ -6,6 +6,11 @@ import { Check, Users, User, Gift } from "lucide-react";
 
 const Register = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const registrationOptions = [
     {
