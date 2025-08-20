@@ -2,15 +2,15 @@ const instructors = [
   {
     id: 1,
     name: "Vineet Sharma",
-    role: "Founder & CEO",
-    image: "/lawyer_photo.jpg",
+    role: "Founder",
+    image: "/Vineet.webp",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 2,
     name: "Sanjana Wadhwa",
-    role: "Legal Director",
-    image: "/judge.jpg",
+    role: "Cheif Executive Officer",
+    image: "/sanjanO.webp",
     roleColor: "text-[#ea4820]",
   },
   {
@@ -51,8 +51,8 @@ const instructors = [
   {
     id: 8,
     name: "Tithika Mittal",
-    role: "Student Relations Manager",
-    image: "/judge.jpg",
+    role: "Technology Ecosystem Coordinator",
+    image: "/tithika.webp",
     roleColor: "text-[#ea4820]",
   },
 ];

@@ -2,22 +2,22 @@ const stats = [
   {
     number: "200+",
     label: "Years of legal experience onboard",
-    color: "text-orange-800",
+    color: "text-[#ea4820]",
   },
   {
     number: "100+",
     label: " Years of technology experience onboard",
-    color: "text-orange-800",
+    color: "text-[#ea4820]",
   },
   {
     number: "30+",
     label: "Expert Professors",
-    color: "text-orange-800",
+    color: "text-[#ea4820]",
   },
   {
     number: "50+",
     label: "Mentors",
-    color: "text-orange-800",
+    color: "text-[#ea4820]",
   },
 ];
 

@@ -23,7 +23,7 @@ const Header = () => {
     { name: "ABOUT US", href: "/about" },
     { name: "LEGAL-O", href: "/courses", hasDropdown: true },
     { name: "UPCOMING EVENTS", href: "/events" },
-    { name: "REGISTER", href: "/register" },
+    { name: "SUBSCRIPTION", href: "/register" },
     // { name: "PAGES", href: "/pages" },
     // { name: "BLOG", href: "/blog" },
     { name: "CONTACT US", href: "/contact" },
@@ -86,7 +86,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-800 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#ea4820] rounded-full flex items-center justify-center">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full"></div>
               </div>
               <span className="text-lg sm:text-xl font-bold text-white">
@@ -95,7 +95,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
               {navigation.map((item) => (
                 <div
                   key={item.name}
@@ -109,7 +109,7 @@ const Header = () => {
                         </span>
                         <ChevronDown
                           size={14}
-                          className="text-white group-hover:text-orange-800 transition-colors duration-200"
+                          className="text-white group-hover:text-[#ea4820] transition-colors duration-200"
                         />
                       </div>
                       {/* Desktop Dropdown */}
@@ -119,7 +119,7 @@ const Header = () => {
                             <Link
                               key={service.name}
                               to={service.href}
-                              className={`block px-4 py-3 text-sm text-white hover:bg-orange-800 hover:text-white transition-colors duration-200 ${
+                              className={`block px-4 py-3 text-sm text-white hover:bg-[#ea4820] hover:text-white transition-colors duration-200 ${
                                 index === 0 ? "rounded-t-lg" : ""
                               } ${
                                 index === legalOServices.length - 1
@@ -149,7 +149,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-orange-800 p-2"
+              className="lg:hidden text-[#ea4820] p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -158,14 +158,14 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden border-t border-orange-800 bg-black absolute left-0 right-0 top-full shadow-lg">
+            <div className="lg:hidden border-t border-[#ea4820] bg-black absolute left-0 right-0 top-full shadow-lg">
               <nav className="flex flex-col space-y-0 p-4">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <div key={item.name}>
                     {item.hasDropdown ? (
                       <div>
                         <button
-                          className="w-full text-left text-sm font-medium transition-colors text-white hover:text-orange-800 py-3 px-4 border-b border-gray-700 flex items-center justify-between"
+                          className="w-full text-left text-sm font-medium transition-colors text-white hover:text-orange-800 py-3 px-4 border-b border-white/20 flex items-center justify-between"
                           onClick={() =>
                             setIsLegalODropdownOpen(!isLegalODropdownOpen)
                           }
@@ -181,11 +181,11 @@ const Header = () => {
                         {/* Mobile Dropdown */}
                         {isLegalODropdownOpen && (
                           <div className="bg-black border-l-2 border-orange-800">
-                            {legalOServices.map((service) => (
+                            {legalOServices.map((service, serviceIndex) => (
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block text-sm text-white hover:text-orange-800 py-2 px-8 border-b border-gray-700 last:border-b-0 transition-colors duration-200"
+                                className="block text-sm text-white hover:text-[#ea4820] py-2 px-8 border-b border-white/20 last:border-b-0 transition-colors duration-200"
                                 onClick={() => {
                                   setIsMenuOpen(false);
                                   setIsLegalODropdownOpen(false);
@@ -200,7 +200,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-sm font-medium transition-colors text-white hover:text-orange-800 py-3 px-4 border-b border-gray-700 last:border-b-0`}
+                        className={`text-sm font-medium transition-colors text-white hover:text-[#ea4820] py-3 px-4 border-b border-white/20 last:border-b-0`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

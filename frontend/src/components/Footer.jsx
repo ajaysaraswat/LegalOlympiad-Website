@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
 
           {/* Courses */}
-          <div className="slide-in-right stagger-2">
+          {/* <div className="slide-in-right stagger-2">
             <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
               Popular Courses
             </h3>
@@ -143,7 +143,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="slide-in-right">

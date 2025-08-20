@@ -19,7 +19,7 @@ const AboutSection = () => {
               future-ready lawyers for India and beyond.
             </p>
             <div className="mb-6 sm:mb-8">
-              <h3 className="text-lg sm:text-xl font-bold text-orange-800 mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
                 Mission Statement
               </h3>
               <p className="text-sm sm:text-base text-black">

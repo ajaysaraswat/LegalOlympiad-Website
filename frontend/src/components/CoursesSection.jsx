@@ -109,21 +109,25 @@ const ServicesSection = () => {
                 } hover:scale-105`}
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#ea4820] p-2 rounded-lg">
-                    <IconComponent size={20} className="text-white" />
+                  <div className="p-2 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg m-2">
+                    <div className="relative overflow-hidden rounded-lg border-2 border-orange-300 shadow-lg">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#ea4820] p-2 rounded-lg shadow-md">
+                        <IconComponent size={20} className="text-white" />
+                      </div>
+                      <button className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white p-1.5 sm:p-2 rounded-full transition-colors duration-300 shadow-md">
+                        <Heart
+                          size={14}
+                          className="sm:w-4 sm:h-4 text-gray-600 hover:text-red-500"
+                        />
+                      </button>
+                    </div>
                   </div>
-                  <button className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white p-1.5 sm:p-2 rounded-full transition-colors duration-300">
-                    <Heart
-                      size={14}
-                      className="sm:w-4 sm:h-4 text-gray-600 hover:text-red-500"
-                    />
-                  </button>
                 </div>
 
                 <div className="p-4 sm:p-6">

@@ -10,9 +10,12 @@ import {
   GraduationCap,
   Calendar,
   BookOpen,
+  ArrowLeft,
+  Users,
+  Gift,
 } from "lucide-react";
 
-const RegistrationForm = () => {
+const RegistrationForm = ({ registrationType, onBack }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,11 +32,58 @@ const RegistrationForm = () => {
     courseInterest: "",
     experience: "",
     motivation: "",
+    // Group registration fields
+    teamName: "",
+    teamMembers: "",
+    teamLeader: "",
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const getRegistrationTypeInfo = () => {
+    switch (registrationType) {
+      case "free":
+        return {
+          title: "Free Registration",
+          icon: Gift,
+          color: "text-green-600",
+          bgColor: "bg-green-50",
+          description: "Join our community and access basic resources",
+          price: "₹0",
+        };
+      case "individual":
+        return {
+          title: "Individual Registration",
+          icon: User,
+          color: "text-orange-600",
+          bgColor: "bg-orange-50",
+          description: "Complete access for individual students",
+          price: "₹2,999",
+        };
+      case "group":
+        return {
+          title: "Group Registration",
+          icon: Users,
+          color: "text-blue-600",
+          bgColor: "bg-blue-50",
+          description: "Team registration for 3-5 students",
+          price: "₹4,999",
+        };
+      default:
+        return {
+          title: "Registration",
+          icon: User,
+          color: "text-gray-600",
+          bgColor: "bg-gray-50",
+          description: "Join Legal Olympiad",
+          price: "",
+        };
+    }
+  };
+
+  const registrationInfo = getRegistrationTypeInfo();
 
   const validateForm = () => {
     const newErrors = {};
@@ -73,6 +123,16 @@ const RegistrationForm = () => {
     if (!formData.motivation.trim())
       newErrors.motivation = "Motivation statement is required";
 
+    // Group registration specific validation
+    if (registrationType === "group") {
+      if (!formData.teamName.trim())
+        newErrors.teamName = "Team name is required";
+      if (!formData.teamMembers.trim())
+        newErrors.teamMembers = "Team members information is required";
+      if (!formData.teamLeader.trim())
+        newErrors.teamLeader = "Team leader name is required";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -103,13 +163,16 @@ const RegistrationForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Send data to backend API
+      // Send data to backend API with registration type
       const response = await fetch("http://localhost:5001/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          registrationType,
+        }),
       });
 
       const result = await response.json();
@@ -135,10 +198,16 @@ const RegistrationForm = () => {
         courseInterest: "",
         experience: "",
         motivation: "",
+        teamName: "",
+        teamMembers: "",
+        teamLeader: "",
       });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitSuccess(false), 5000);
+      // Store the result for success message
+      setSubmitSuccess(result);
+
+      // Reset success message after 8 seconds
+      setTimeout(() => setSubmitSuccess(false), 8000);
     } catch (error) {
       console.error("Registration error:", error);
       setErrors({
@@ -151,38 +220,89 @@ const RegistrationForm = () => {
   };
 
   if (submitSuccess) {
+    const getSuccessContent = () => {
+      switch (submitSuccess.registrationType) {
+        case "free":
+          return {
+            title: "Free Registration Successful!",
+            message:
+              "Welcome to Legal Olympiad! You now have access to our basic resources and community. Check your email for login details.",
+            icon: Gift,
+            color: "text-green-600",
+            bgColor: "bg-green-100",
+          };
+        case "individual":
+          return {
+            title: "Individual Registration Submitted!",
+            message:
+              "Your registration has been submitted successfully. Please complete the payment of ₹2,999 to activate your premium account. We'll send payment instructions to your email.",
+            icon: User,
+            color: "text-orange-600",
+            bgColor: "bg-orange-100",
+          };
+        case "group":
+          return {
+            title: "Group Registration Submitted!",
+            message:
+              "Your team registration has been submitted successfully. Please complete the payment of ₹4,999 to activate your team account. We'll send payment instructions to your email.",
+            icon: Users,
+            color: "text-blue-600",
+            bgColor: "bg-blue-100",
+          };
+        default:
+          return {
+            title: "Registration Successful!",
+            message:
+              "Thank you for registering with Legal Olympiad. We've received your application and will contact you soon with further details.",
+            icon: User,
+            color: "text-green-600",
+            bgColor: "bg-green-100",
+          };
+      }
+    };
+
+    const successContent = getSuccessContent();
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg
-                className="w-8 h-8 text-green-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
+            <div
+              className={`w-16 h-16 ${successContent.bgColor} rounded-full flex items-center justify-center mx-auto mb-6`}
+            >
+              <successContent.icon
+                className={`w-8 h-8 ${successContent.color}`}
+              />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Registration Successful!
+              {successContent.title}
             </h2>
-            <p className="text-gray-600 mb-6">
-              Thank you for registering with Legal Olympiad. We've received your
-              application and will contact you soon with further details.
-            </p>
-            <Button
-              onClick={() => setSubmitSuccess(false)}
-              className="bg-orange-800 hover:bg-orange-900"
-            >
-              Register Another Student
-            </Button>
+            <p className="text-gray-600 mb-6">{successContent.message}</p>
+            {submitSuccess.paymentRequired && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                <p className="text-yellow-800 font-medium">
+                  Payment Required: ₹{submitSuccess.amount}
+                </p>
+                <p className="text-yellow-700 text-sm mt-1">
+                  Complete payment to unlock all features
+                </p>
+              </div>
+            )}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                onClick={() => setSubmitSuccess(false)}
+                className="bg-orange-800 hover:bg-orange-900"
+              >
+                Register Another Student
+              </Button>
+              <Button
+                onClick={onBack}
+                variant="outline"
+                className="text-orange-800 border-orange-800 hover:bg-orange-50"
+              >
+                Back to Plans
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -192,23 +312,115 @@ const RegistrationForm = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Student Registration Form
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join the Legal Olympiad movement and discover your legal calling.
-            Fill out the form below to begin your journey.
-          </p>
+        {/* Header with Back Button */}
+        <div className="mb-8">
+          <Button
+            onClick={onBack}
+            variant="outline"
+            className="mb-6 text-orange-800 border-orange-800 hover:bg-orange-50"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Plans
+          </Button>
+
+          <div className="text-center mb-8">
+            <div
+              className={`w-20 h-20 ${registrationInfo.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
+            >
+              <registrationInfo.icon
+                className={`w-10 h-10 ${registrationInfo.color}`}
+              />
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              {registrationInfo.title}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              {registrationInfo.description}
+            </p>
+            {registrationInfo.price && (
+              <div className="text-2xl font-bold text-orange-600 mt-2">
+                {registrationInfo.price}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Group Registration Fields */}
+            {registrationType === "group" && (
+              <div className="space-y-6">
+                <h2 className="text-2xl font-semibold text-gray-900 flex items-center gap-2">
+                  <Users className="w-6 h-6 text-blue-600" />
+                  Team Information
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Team Name *
+                    </label>
+                    <Input
+                      name="teamName"
+                      value={formData.teamName}
+                      onChange={handleInputChange}
+                      placeholder="Enter your team name"
+                      className={errors.teamName ? "border-red-500" : ""}
+                    />
+                    {errors.teamName && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.teamName}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Team Leader Name *
+                    </label>
+                    <Input
+                      name="teamLeader"
+                      value={formData.teamLeader}
+                      onChange={handleInputChange}
+                      placeholder="Enter team leader name"
+                      className={errors.teamLeader ? "border-red-500" : ""}
+                    />
+                    {errors.teamLeader && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.teamLeader}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Team Members Information *
+                  </label>
+                  <Textarea
+                    name="teamMembers"
+                    value={formData.teamMembers}
+                    onChange={handleInputChange}
+                    placeholder="List all team members with their names, emails, and roles..."
+                    rows={4}
+                    className={errors.teamMembers ? "border-red-500" : ""}
+                  />
+                  {errors.teamMembers && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.teamMembers}
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Personal Information */}
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold text-gray-900 flex items-center gap-2">
                 <User className="w-6 h-6 text-orange-800" />
-                Personal Information
+                {registrationType === "group"
+                  ? "Team Leader Information"
+                  : "Personal Information"}
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -597,6 +809,9 @@ const RegistrationForm = () => {
                       courseInterest: "",
                       experience: "",
                       motivation: "",
+                      teamName: "",
+                      teamMembers: "",
+                      teamLeader: "",
                     });
                     setErrors({});
                   }}

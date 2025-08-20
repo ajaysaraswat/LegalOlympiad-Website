@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    tagline: "Nyay ke Yodha Bano – Apna Raasta Khud Chuno",
+    tagline: "BECOME WARRIORS OF JUSTICE – CHOOSE YOUR OWN PATH IN LAW",
     title: "Legal Olympiad: Discover Your Legal Calling",
     description:
       "India doesn't just need more lawyers it needs bold, visionary legal minds. ",
@@ -76,7 +76,7 @@ const HeroCarousel = () => {
         >
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl slide-in-left">
-              <p className="text-orange-800 text-sm sm:text-base md:text-lg font-medium mb-2 sm:mb-4">
+              <p className="text-[#ea4820] text-sm sm:text-base md:text-lg font-medium mb-2 sm:mb-4">
                 {slide.tagline}
               </p>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
@@ -95,7 +95,7 @@ const HeroCarousel = () => {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="border-white text-white hover:text-orange-800 hover:bg-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
+                  className="border-white text-white hover:text-[#ea4820] hover:bg-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                 >
                   GET STARTED
                 </Button>
