@@ -120,7 +120,11 @@ const ServicesSection = () => {
                       <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#ea4820] p-2 rounded-lg shadow-md">
                         <IconComponent size={20} className="text-white" />
                       </div>
-                      <button className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white p-1.5 sm:p-2 rounded-full transition-colors duration-300 shadow-md">
+                      <button
+                        className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white 
+  p-1.5 sm:p-2 rounded-full transition-colors duration-300 shadow-md 
+  flex items-center justify-center"
+                      >
                         <Heart
                           size={14}
                           className="sm:w-4 sm:h-4 text-gray-600 hover:text-red-500"

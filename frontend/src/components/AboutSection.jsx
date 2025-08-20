@@ -10,7 +10,7 @@ const AboutSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6 leading-tight">
               About the Legal Olympiad
             </h2>
-            <div className="w-12 sm:w-16 h-1 bg-orange-800 mb-6 sm:mb-8"></div>
+            <div className="w-12 sm:w-16 h-1 bg-[#ea4820] mb-6 sm:mb-8"></div>
             <p className="text-sm sm:text-base text-black mb-4 sm:mb-6">
               The Legal Olympiad is more than a competition, it’s a launchpad
               for law students to discover their specialization, build critical

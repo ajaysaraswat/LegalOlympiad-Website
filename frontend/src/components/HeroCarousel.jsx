@@ -26,7 +26,7 @@ const slides = [
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
       " It's a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
-    image: "/hero3.jpg",
+    image: "/heroImg.jpg",
   },
 ];
 

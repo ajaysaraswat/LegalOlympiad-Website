@@ -152,20 +152,20 @@ const Header = () => {
               className="lg:hidden text-[#ea4820] p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </Button>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="lg:hidden border-t border-[#ea4820] bg-black absolute left-0 right-0 top-full shadow-lg">
-              <nav className="flex flex-col space-y-0 p-4">
+              <nav className="flex flex-col p-4">
                 {navigation.map((item, index) => (
-                  <div key={item.name}>
+                  <div key={item.name} className="mb-2">
                     {item.hasDropdown ? (
                       <div>
                         <button
-                          className="w-full text-left text-sm font-medium transition-colors text-white hover:text-orange-800 py-3 px-4 border-b border-white/20 flex items-center justify-between"
+                          className="w-full text-left text-sm font-medium transition-colors text-white hover:text-orange-800 py-4 px-4 border-b border-grey-700 flex items-center justify-between"
                           onClick={() =>
                             setIsLegalODropdownOpen(!isLegalODropdownOpen)
                           }
@@ -185,7 +185,7 @@ const Header = () => {
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block text-sm text-white hover:text-[#ea4820] py-2 px-8 border-b border-white/20 last:border-b-0 transition-colors duration-200"
+                                className="block text-sm text-white hover:text-[#ea4820] py-3 px-8 border-b border-white/30 last:border-b-0 transition-colors duration-200"
                                 onClick={() => {
                                   setIsMenuOpen(false);
                                   setIsLegalODropdownOpen(false);
@@ -200,7 +200,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-sm font-medium transition-colors text-white hover:text-[#ea4820] py-3 px-4 border-b border-white/20 last:border-b-0`}
+                        className={`text-sm font-medium transition-colors text-white hover:text-[#ea4820] py-4 px-4 border-b border-white block`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

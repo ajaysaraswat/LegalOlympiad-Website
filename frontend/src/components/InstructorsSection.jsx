@@ -9,42 +9,42 @@ const instructors = [
   {
     id: 2,
     name: "Sanjana Wadhwa",
-    role: "Cheif Executive Officer",
+    role: "Co-Founder",
     image: "/sanjanO.webp",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 3,
     name: "Siraj Abbasi",
-    role: "Head of Operations",
+    role: "Co-Founder",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 4,
     name: "Adnan Abbasi",
-    role: "Technology Lead",
+    role: "Co-Founder",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 5,
     name: "Praveen Sharma",
-    role: "Academic Coordinator",
+    role: "Co-Founder",
     image: "/judge.jpg",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 6,
     name: "Vikas Gogne",
-    role: "Mentorship Director",
+    role: "Co-Founder",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#ea4820]",
   },
   {
     id: 7,
     name: "Satyam Chaturvedi",
-    role: "Content & Curriculum Lead",
+    role: "Co-Founder",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#ea4820]",
   },
@@ -87,7 +87,7 @@ const InstructorsSection = () => {
                   alt={instructor.name}
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-orange-800/0 group-hover:bg-orange-800/10 transition-colors duration-300"></div>
+                <div class="absolute inset-0 sm:inset-0 w-3/4 sm:w-full bg-orange-800/0 group-hover:bg-orange-800/10 transition-colors duration-300 mx-auto"></div>
               </div>
 
               <h3 className="text-lg sm:text-xl font-bold text-black mb-2 group-hover:text-orange-800 transition-colors duration-300">
