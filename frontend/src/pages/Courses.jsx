@@ -13,7 +13,7 @@ const Courses = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="slide-in-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Our Courses
+              Our Services
             </h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Explore our comprehensive catalog of courses designed to advance
