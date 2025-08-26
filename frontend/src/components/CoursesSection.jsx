@@ -11,6 +11,7 @@ import {
   Network,
   Gavel,
 } from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
@@ -76,6 +77,20 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [likedServices, setLikedServices] = useState(new Set());
+
+  const toggleLike = (serviceId) => {
+    setLikedServices((prev) => {
+      const newLiked = new Set(prev);
+      if (newLiked.has(serviceId)) {
+        newLiked.delete(serviceId);
+      } else {
+        newLiked.add(serviceId);
+      }
+      return newLiked;
+    });
+  };
+
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
@@ -101,6 +116,7 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const isLiked = likedServices.has(service.id);
             return (
               <div
                 key={service.id}
@@ -121,13 +137,18 @@ const ServicesSection = () => {
                         <IconComponent size={20} className="text-white" />
                       </div>
                       <button
+                        onClick={() => toggleLike(service.id)}
                         className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 hover:bg-white 
   p-1.5 sm:p-2 rounded-full transition-colors duration-300 shadow-md 
   flex items-center justify-center"
                       >
                         <Heart
                           size={14}
-                          className="sm:w-4 sm:h-4 text-gray-600 hover:text-red-500"
+                          className={`sm:w-4 sm:h-4 transition-colors duration-300 ${
+                            isLiked
+                              ? "text-red-500 fill-red-500"
+                              : "text-gray-600 hover:text-red-500"
+                          }`}
                         />
                       </button>
                     </div>
