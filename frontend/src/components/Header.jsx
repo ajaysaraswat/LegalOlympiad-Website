@@ -86,7 +86,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <div className="flex-shrink-0 cursor-pointer group">
-              <Link to="/">
+              <Link to="/" onClick={() => window.location.reload()}>
                 <img
                   src="/legelOpng.png"
                   alt="Legal Olympiad Logo"
@@ -121,7 +121,7 @@ const Header = () => {
                             <Link
                               key={service.name}
                               to={service.href}
-                              className={`block px-4 py-3 text-sm text-black hover:bg-[#ea4820] hover:text-black transition-colors duration-200 ${
+                              className={`block px-4 py-3 text-sm text-white hover:bg-[#ea4820] hover:text-black transition-colors duration-200 ${
                                 index === 0 ? "rounded-t-lg" : ""
                               } ${
                                 index === legalOServices.length - 1
@@ -168,7 +168,7 @@ const Header = () => {
                     {item.hasDropdown ? (
                       <div>
                         <button
-                          className="w-full text-left text-base font-semibold transition-colors text-black hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 flex items-center justify-between"
+                          className="w-full text-left text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 flex items-center justify-between"
                           onClick={() =>
                             setIsLegalODropdownOpen(!isLegalODropdownOpen)
                           }
@@ -188,7 +188,7 @@ const Header = () => {
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block text-sm text-black hover:text-[#ea4820] py-3 px-8 border-b border-gray-700 last:border-b-0 transition-colors duration-200"
+                                className="block text-sm text-white hover:text-[#ea4820] py-3 px-8 border-b border-gray-700 last:border-b-0 transition-colors duration-200"
                                 onClick={() => {
                                   setIsMenuOpen(false);
                                   setIsLegalODropdownOpen(false);
@@ -203,7 +203,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-base font-semibold transition-colors text-black hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 block`}
+                        className={`text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 block`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

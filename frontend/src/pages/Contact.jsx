@@ -1,97 +1,50 @@
+import React from "react";
 import Header from "../components/Header";
+import ContactCard from "./ContactCard";
+import { Mail, Calendar } from "lucide-react";
 import Footer from "../components/Footer";
-import { Button } from "../components/ui/Button";
-import { Input } from "../components/ui/Input";
-import { Textarea } from "../components/ui/TextArea";
-import { Mail, Phone, MapPin } from "lucide-react";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen bg-background"
+      style={{ backgroundColor: "hsl(44, 20%, 94%)" }}
+    >
       <Header />
 
-      {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-black to-orange-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="slide-in-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Get in touch with us for any questions or support
-            </p>
-          </div>
+      <main className="container mx-auto px-4 lg:px-6 py-16 lg:py-24">
+        {/* Hero Section */}
+        <div className="text-center mb-16 lg:mb-20">
+          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 pt-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Get in touch with our team to discuss your translation needs
+          </p>
         </div>
-      </section>
 
-      {/* Contact Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="slide-in-left">
-              <h2 className="text-3xl font-bold text-black mb-8">
-                Send us a Message
-              </h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="Your Name" />
-                  <Input placeholder="Your Email" type="email" />
-                </div>
-                <Input placeholder="Subject" />
-                <Textarea placeholder="Your Message" rows={6} />
-                <Button className="bg-orange-800 hover:bg-orange-800/90 text-white w-full md:w-auto">
-                  Send Message
-                </Button>
-              </form>
-            </div>
+        {/* Contact Options */}
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+          <ContactCard
+            icon={<Mail className="w-8 h-8" />}
+            title="Email Us"
+            description="Reach out directly to our support team"
+            actionText="connect@instrek.com"
+            actionHref="mailto:connect@instrek.com?subject=Inquiry from Instrek Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
+          />
 
-            {/* Contact Info */}
-            <div className="slide-in-right">
-              <h2 className="text-3xl font-bold text-black mb-8">
-                Get in Touch
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-2">Address</h3>
-                    <p className="text-gray-600">
-                      24th street, California, United States
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-2">Phone</h3>
-                    <p className="text-gray-600">+1 974 8845246937</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-black mb-2">Email</h3>
-                    <p className="text-gray-600">info@legalolympiad.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ContactCard
+            icon={<Calendar className="w-8 h-8" />}
+            title="Schedule a Demo"
+            description="Schedule a demo meeting - both you and Instrek will receive calendar invites"
+            actionText="Schedule Demo"
+            isButton={true}
+          />
         </div>
-      </section>
-
+      </main>
       <Footer />
     </div>
   );
 };
 
-export default Contact;
+export default ContactSection;

@@ -50,53 +50,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 sm:gap-4">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook
-                  size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
-                />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram
-                  size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
-                />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter
-                  size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
-                />
-              </a>
-              <a
-                href="https://linkedin.com"
+                href="https://in.linkedin.com/company/instrek-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin
                   size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
-                />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Youtube
-                  size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors"
+                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors bg-blue-700"
                 />
               </a>
             </div>
@@ -239,31 +199,31 @@ const Footer = () => {
                   size={16}
                   className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
                 />
-                <span className="text-xs sm:text-sm text-gray-300">
-                  Address: C-18, Second floor, Pamposh Enclave,New Delhi -
+                <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  Address: C-18, Second floor, Pamposh Enclave, New Delhi -
                   110048
                 </span>
               </div>
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-start gap-2 sm:gap-3">
                 <Phone
                   size={16}
-                  className="sm:w-5 sm:h-5 text-[#ea4820] flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
                 />
                 <a
                   href="tel:+19748845246937"
-                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors leading-relaxed"
                 >
                   +91 7428050511
                 </a>
               </div>
-              <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex items-start gap-2 sm:gap-3">
                 <Mail
                   size={16}
-                  className="sm:w-5 sm:h-5 text-[#ea4820] flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
                 />
                 <a
                   href="mailto:info@legalolympiad.com"
-                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors leading-relaxed"
                 >
                   info@legalolympiad.com
                 </a>
@@ -278,12 +238,13 @@ const Footer = () => {
             © 2024 LegalOlympiad. All rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-6 mt-3 sm:mt-0">
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
+              onClick={handleLinkClick}
               className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
             >
               Privacy Policy
-            </a>
+            </Link>
             <a
               href="/terms-of-service"
               className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"

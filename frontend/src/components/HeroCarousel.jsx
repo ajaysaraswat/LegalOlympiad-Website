@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import { Button } from "../components/ui/Button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
     id: 1,
     tagline: "BECOME WARRIORS OF JUSTICE – CHOOSE YOUR OWN PATH IN LAW",
-    title: "Legal Olympiad: Discover Your Legal Calling",
+    title: "LEGAL OLYMPIAD: DISCOVER YOUR LEGAL CALLING",
     description:
       "India doesn't just need more lawyers it needs bold, visionary legal minds. ",
-    image: "/hero1.jpg",
+    image: {
+      mobile: "/hero1Mobile.jpg",
+      desktop: "/hero1.jpg",
+    },
     cta: "Join the Movement",
   },
   {
@@ -17,8 +21,11 @@ const slides = [
     tagline: "UNLOCK YOUR POTENTIAL",
     title: "TRANSFORM YOUR CAREER WITH EXPERT GUIDANCE",
     description:
-      "Every year, thousands of students enter law schools full of passion but without direction. The Legal Olympiad was created to change that. This isn't just an exam.",
-    image: "/studentlaw.png",
+      "The Legal Olympiad isn’t just an exam it’s a journey to discover your purpose, sharpen your skills, and unlock the lawyer within you",
+    image: {
+      mobile: "/studentlaw.png",
+      desktop: "/studentlaw.png",
+    },
   },
   {
     id: 3,
@@ -26,13 +33,18 @@ const slides = [
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
       " It's a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
-    image: "/heroImg.jpg",
+    image: {
+      mobile: "/heroImg.jpg",
+      desktop: "/heroImg.jpg",
+    },
   },
 ];
 
 const HeroCarousel = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -43,6 +55,22 @@ const HeroCarousel = () => {
 
     return () => clearInterval(interval);
   }, [isAutoPlay]);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      console.log("Screen size check:", {
+        width: window.innerWidth,
+        isMobile: mobile,
+      });
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -69,9 +97,18 @@ const HeroCarousel = () => {
               : "translate-x-full"
           }`}
           style={{
-            background: `url(${slide.image})`,
+            backgroundImage: `url(${
+              isMobile ? slide.image.mobile : slide.image.desktop
+            })`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+          }}
+          onLoad={() => {
+            console.log("Slide loaded:", {
+              slideId: slide.id,
+              isMobile,
+              imageUrl: isMobile ? slide.image.mobile : slide.image.desktop,
+            });
           }}
         >
           <div className="container mx-auto px-4 h-full flex items-center">
@@ -89,6 +126,7 @@ const HeroCarousel = () => {
                 <Button
                   size="sm"
                   className="bg-orange-800 hover:bg-orange-800/90 text-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
+                  onClick={() => navigate("/courses")}
                 >
                   VIEW COURSE
                 </Button>
@@ -96,6 +134,7 @@ const HeroCarousel = () => {
                   size="sm"
                   variant="outline"
                   className="border-white text-white hover:text-[#ea4820] hover:bg-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
+                  onClick={() => navigate("/register")}
                 >
                   GET STARTED
                 </Button>
