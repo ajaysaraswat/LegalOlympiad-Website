@@ -251,12 +251,6 @@ const Footer = () => {
             >
               Terms of Service
             </a>
-            <a
-              href="/support"
-              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
-            >
-              Support
-            </a>
           </div>
         </div>
       </div>
