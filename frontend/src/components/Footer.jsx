@@ -245,12 +245,13 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
-            <a
-              href="/terms-of-service"
+            <Link
+              to="/terms-of-service"
+              onClick={handleLinkClick}
               className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
