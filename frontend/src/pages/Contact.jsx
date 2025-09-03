@@ -19,7 +19,7 @@ const ContactSection = () => {
             Contact Us
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Get in touch with our team to discuss your translation needs
+            Connect with the Legal-Olympiad team for queries or support
           </p>
         </div>
 

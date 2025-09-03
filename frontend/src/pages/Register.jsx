@@ -111,7 +111,7 @@ const Register = () => {
             {registrationOptions.map((option) => (
               <div
                 key={option.id}
-                className={`relative ${option.bgColor} rounded-2xl shadow-xl p-8 border-2 ${option.borderColor} hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2`}
+                className={`relative ${option.bgColor} rounded-2xl shadow-xl p-8 border-2 ${option.borderColor} hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 flex flex-col`}
                 onClick={() => setSelectedOption(option.id)}
               >
                 {option.popular && (
@@ -137,7 +137,7 @@ const Register = () => {
                   <p className="text-gray-600">{option.description}</p>
                 </div>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-4 mb-8 flex-grow">
                   {option.features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -147,7 +147,7 @@ const Register = () => {
                 </div>
 
                 <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${option.color} hover:shadow-lg transform hover:scale-105`}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-black transition-all duration-300 ${option.color} hover:shadow-lg transform hover:scale-105`}
                 >
                   Choose {option.title}
                 </button>

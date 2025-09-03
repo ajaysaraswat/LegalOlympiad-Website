@@ -104,11 +104,11 @@ const ServicesSection = () => {
               journey.
             </p>
           </div>
-          <div className="slide-in-right mt-4 sm:mt-6 md:mt-0">
+          {/* <div className="slide-in-right mt-4 sm:mt-6 md:mt-0">
             <Button className="bg-[#ea4820] hover:bg-[#ea4820] text-white text-xs sm:text-sm">
               Explore All Services
             </Button>
-          </div>
+          </div> */}
         </div>
 
         <div className="w-16 sm:w-24 h-1 bg-orange-800 mb-8 sm:mb-12"></div>

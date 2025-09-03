@@ -86,7 +86,10 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <div className="flex-shrink-0 cursor-pointer group">
-              <Link to="/" onClick={() => window.location.reload()}>
+              <Link
+                to="/"
+                onClick={() => setTimeout(() => window.location.reload(), 100)}
+              >
                 <img
                   src="/legelOpng.png"
                   alt="Legal Olympiad Logo"
@@ -168,7 +171,11 @@ const Header = () => {
                     {item.hasDropdown ? (
                       <div>
                         <button
-                          className="w-full text-left text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 flex items-center justify-between"
+                          className={`w-full text-left text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 flex items-center justify-between ${
+                            index === navigation.length - 1
+                              ? ""
+                              : "border-b border-gray-700"
+                          }`}
                           onClick={() =>
                             setIsLegalODropdownOpen(!isLegalODropdownOpen)
                           }
@@ -203,7 +210,11 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 border-b border-gray-700 block`}
+                        className={`text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-3 px-4 block ${
+                          index === navigation.length - 1
+                            ? ""
+                            : "border-b border-gray-700"
+                        }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}

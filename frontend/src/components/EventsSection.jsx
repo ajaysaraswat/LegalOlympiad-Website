@@ -151,7 +151,7 @@ const EventsSection = () => {
         <div className="text-center mb-16">
           <p className="text-gray-500 text-lg mb-4">Our Events</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
-            UPCOMING <span className="text-brand-cyan">EVENTS</span> &{" "}
+            UPCOMING <span className="text-[#FFD700]">EVENTS</span> &{" "}
             <span className="text-brand-cyan">COMPETITIONS</span>
           </h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
