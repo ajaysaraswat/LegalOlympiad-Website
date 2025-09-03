@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "../components/ui/Button";
 import {
   Menu,
@@ -16,6 +16,8 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLegalODropdownOpen, setIsLegalODropdownOpen] = useState(false);
+  const [isDesktopLegalODropdownOpen, setIsDesktopLegalODropdownOpen] =
+    useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -37,6 +39,35 @@ const Header = () => {
     { name: "Subjects for Tomorrow", href: "/legal-o/subjects" },
     { name: "Mentoring Sessions", href: "/legal-o/mentoring" },
   ];
+
+  // Handle Legal-O dropdown toggle for desktop
+  const handleLegalOToggle = () => {
+    setIsDesktopLegalODropdownOpen(!isDesktopLegalODropdownOpen);
+  };
+
+  // Close dropdown when clicking outside
+  const handleClickOutside = (e) => {
+    if (!e.target.closest(".legal-o-dropdown-container")) {
+      setIsDesktopLegalODropdownOpen(false);
+    }
+  };
+
+  // Close dropdown when pressing Escape key
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      setIsDesktopLegalODropdownOpen(false);
+    }
+  };
+
+  // Add click outside listener and keyboard support
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
@@ -104,33 +135,47 @@ const Header = () => {
               {navigation.map((item) => (
                 <div
                   key={item.name}
-                  className="relative group flex items-center"
+                  className="relative group flex items-center legal-o-dropdown-container"
                 >
                   {item.hasDropdown ? (
                     <>
-                      <div className="flex items-center gap-1 cursor-pointer">
+                      <div
+                        className="flex items-center gap-1 cursor-pointer touch-manipulation"
+                        onClick={handleLegalOToggle}
+                      >
                         <span className="text-sm xl:text-base font-semibold transition-colors duration-200 text-black group-hover:text-[#ea4820]">
                           {item.name}
                         </span>
                         <ChevronDown
                           size={16}
-                          className="text-black group-hover:text-[#ea4820] transition-colors duration-200"
+                          className={`text-black group-hover:text-[#ea4820] transition-all duration-200 ${
+                            isDesktopLegalODropdownOpen ? "rotate-180" : ""
+                          }`}
                         />
                       </div>
-                      {/* Desktop Dropdown */}
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-black border border-gray-700 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top">
+                      {/* Desktop Dropdown - Works on both hover and click */}
+                      <div
+                        className={`absolute top-full left-0 mt-2 w-64 bg-black border border-gray-700 rounded-lg shadow-2xl transition-all duration-200 transform origin-top z-50 ${
+                          isDesktopLegalODropdownOpen
+                            ? "opacity-100 visible scale-100"
+                            : "opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100"
+                        }`}
+                      >
                         <div className="py-2">
                           {legalOServices.map((service, index) => (
                             <Link
                               key={service.name}
                               to={service.href}
-                              className={`block px-4 py-3 text-sm text-white hover:bg-[#ea4820] hover:text-black transition-colors duration-200 ${
+                              className={`block px-4 py-3 text-sm text-white hover:bg-[#ea4820] hover:text-black transition-colors duration-200 touch-manipulation ${
                                 index === 0 ? "rounded-t-lg" : ""
                               } ${
                                 index === legalOServices.length - 1
                                   ? "rounded-b-lg"
                                   : ""
                               }`}
+                              onClick={() =>
+                                setIsDesktopLegalODropdownOpen(false)
+                              }
                             >
                               {service.name}
                             </Link>
