@@ -213,7 +213,7 @@ const Footer = () => {
                   href="tel:+19748845246937"
                   className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors leading-relaxed"
                 >
-                  +91 7428050511
+                  +91-9999026602
                 </a>
               </div>
               <div className="flex items-start gap-2 sm:gap-3">
@@ -235,7 +235,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs sm:text-sm text-gray-300 text-center sm:text-left">
-            © 2024 LegalOlympiad. All rights reserved.
+            © 2025 LegalOlympiad. All rights reserved.
           </p>
           <div className="flex gap-4 sm:gap-6 mt-3 sm:mt-0">
             <Link

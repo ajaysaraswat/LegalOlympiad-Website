@@ -25,8 +25,8 @@ const instructors = [
   },
   {
     id: 4,
-    name: "Adnan Abbasi",
-    role: "Co-Founder",
+    name: "XXXX",
+    role: "XXXX",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#ea4820]",
     description: "Specializing in legal technology and digital transformation",
@@ -70,7 +70,7 @@ const InstructorsSection = () => {
     <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-50 via-white to-orange-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
+          {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
             <svg
               className="w-8 h-8 text-orange-600"
               fill="none"
@@ -84,11 +84,11 @@ const InstructorsSection = () => {
                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
               />
             </svg>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          </div> */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 text-center">
             Meet Our <span className="text-orange-600">Leadership Team</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify">
             The Legal Olympiad is led by a dedicated team of legal
             professionals, educators, and innovators committed to transforming
             legal education. Together, we bring diverse expertise to create

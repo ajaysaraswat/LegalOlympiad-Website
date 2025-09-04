@@ -84,10 +84,10 @@ const CategoriesSection = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
-              Why Participate?
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4 text-center">
+              Why Choose Us?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
               Join the Legal Olympiad and unlock your potential in the legal
               world
             </p>
@@ -105,18 +105,16 @@ const CategoriesSection = () => {
                     key={`first-${item.title}`}
                     className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 hover:border-opacity-60 backdrop-blur-sm`}
                   >
-                    <div
-                      className={`mb-6 p-5 rounded-2xl bg-white/80 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
-                    >
+                    <div className="mb-6 flex justify-center">
                       <IconComponent
                         size={48}
                         className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
                       />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 group-hover:text-[#ea4820] transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center group-hover:text-[#ea4820] transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-justify group-hover:text-gray-700 transition-colors duration-300">
                       {item.description}
                     </p>
                     <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#ea4820] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -132,18 +130,16 @@ const CategoriesSection = () => {
                     key={`second-${item.title}`}
                     className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 hover:border-opacity-60 backdrop-blur-sm`}
                   >
-                    <div
-                      className={`mb-6 p-5 rounded-2xl bg-white/80 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
-                    >
+                    <div className="mb-6 flex justify-center">
                       <IconComponent
                         size={48}
                         className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
                       />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 group-hover:text-[#ea4820] transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center group-hover:text-[#ea4820] transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-justify group-hover:text-gray-700 transition-colors duration-300">
                       {item.description}
                     </p>
                     <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#ea4820] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -154,11 +150,6 @@ const CategoriesSection = () => {
           </div>
 
           {/* Scroll indicator */}
-          <div className="text-center mt-8">
-            <p className="text-sm text-gray-500 italic">
-              Hover to pause • Scroll to explore more
-            </p>
-          </div>
         </div>
       </section>
     </>

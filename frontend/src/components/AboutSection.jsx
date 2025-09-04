@@ -11,27 +11,29 @@ const AboutSection = () => {
               About the Legal Olympiad
             </h2>
             <div className="w-12 sm:w-16 h-1 bg-[#ea4820] mb-6 sm:mb-8"></div>
-            <p className="text-sm sm:text-base text-black mb-4 sm:mb-6">
-              The Legal Olympiad is more than a competition, it’s a launchpad
-              for law students to discover their specialization, build critical
-              skills, and connect with mentors. Through assessments,
-              simulations, and AI-driven career mapping, LegalO prepares
-              future-ready lawyers for India and beyond.
+            <p className="text-sm sm:text-base text-black mb-4 sm:mb-6 text-justify leading-relaxed">
+              Legal Olympiad is a pioneering initiative designed to inspire and
+              engage students in the field of law. This unique competition aims
+              to cultivate legal awareness, analytical reasoning, and
+              problem-solving skills among aspiring law students. By presenting
+              real-world scenarios, case studies, and thought-provoking
+              questions, the Olympiad encourages participants to go beyond
+              textbooks and develop a deeper understanding of justice, rights,
+              and responsibilities.
             </p>
-            <div className="mb-6 sm:mb-8">
-              <h3 className="text-lg sm:text-xl font-bold text-[#ea4820] mb-2">
-                Mission Statement
-              </h3>
-              <p className="text-sm sm:text-base text-black">
-                To transform India’s legal education system into a dynamic,
-                accessible, and future-ready ecosystem that cultivates critical
-                thinking, ethical practice, and purpose-driven leadership. By
-                bridging theory with practice through mentorship,
-                interdisciplinary learning, and real-world exposure, we aim to
-                empower law students to use the law as a tool for justice,
-                innovation, and nation-building.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base text-black mb-4 sm:mb-6 text-justify leading-relaxed">
+              The Legal Olympiad is more than an exam it is a platform for
+              mentorship, learning, and excellence. It empowers students to
+              sharpen their logical reasoning, enhance their command over legal
+              principles, and prepare for the challenges of tomorrow's legal
+              profession.
+            </p>
+            <p className="text-sm sm:text-base text-black text-justify leading-relaxed">
+              Much like the Maths or Science Olympiads that identify prodigies
+              in their fields, the Legal Olympiad identifies and nurtures the
+              next generation of advocates, judges, and policy leaders those who
+              will uphold the rule of law and champion justice.
+            </p>
             {/* <div className="bg-orange-800 text-white p-8 rounded-lg text-center flex flex-col items-center">
               <h3 className="text-xl font-bold mb-2">Join the Movement</h3>
               <p className="mb-2">

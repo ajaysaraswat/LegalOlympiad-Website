@@ -26,7 +26,7 @@ const services = [
   },
   {
     id: 2,
-    title: "Legal Podcasts",
+    title: "Legal Podcasts With Experts",
     description:
       "Access exclusive legal podcasts featuring industry experts and thought leaders.",
     image: "/hero2.jpg",

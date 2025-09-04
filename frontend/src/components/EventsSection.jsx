@@ -12,26 +12,26 @@ import {
 const events = [
   {
     id: 1,
-    title: "TED TALKS AT UCF COLLEGE OF EDUCATION",
-    date: "30 July",
-    time: "9AM",
-    location: "Melbourne",
+    title: "OLYMPIAD EXAM 2025 ",
+    date: "08 NOV",
+    time: "10AM",
+    location: "NEW DELHI",
     image: "/upcoming.jpg",
   },
   {
     id: 2,
-    title: "IMPORTANCES OF RESEARCH SEMINAR 2021",
-    date: "30 July",
-    time: "9AM",
-    location: "Melbourne",
+    title: "WEBINAR WITH VIKAS GOGNE",
+    date: "15 DEC",
+    time: "11AM",
+    location: "WORLDWIDE",
     image: "/upcoming.jpg",
   },
   {
     id: 3,
-    title: "NEWLY SUMMER COURSE STARTS FROM JUNE",
-    date: "30 July",
-    time: "9AM",
-    location: "Melbourne",
+    title: "WEBINAR WITH SATYAM CHATURVEDI",
+    date: "20 DEC",
+    time: "10AM",
+    location: "WORLDWIDE",
     image: "/upcoming.jpg",
   },
 ];
@@ -68,15 +68,15 @@ const benefitsPoints = [
     icon: Target,
   },
   {
-    title: "Real-world Skill Development",
+    title: "Real-world Skill Development of Students",
     description: "Develop practical legal skills through hands-on experience",
     icon: Briefcase,
   },
-  {
-    title: "Networking with Top Legal Professionals",
-    description: "Connect with judges, advocates, and industry leaders",
-    icon: Users,
-  },
+  // {
+  //   title: "Networking with Top Legal Professionals",
+  //   description: "Connect with judges, advocates, and industry leaders",
+  //   icon: Users,
+  // },
   {
     title: "Career Launchpad with Internship Opportunities",
     description: "Access exclusive internships and career opportunities",
@@ -93,63 +93,8 @@ const EventsSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* What Makes the Legal Olympiad Different? */}
-        {/* <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
-            What Makes the Legal Olympiad Different?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {differentPoints.map((item) => (
-              <div
-                key={item.title}
-                className="bg-black border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-bold text-orange-800 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-white text-base opacity-90">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div> */}
-        {/* Benefits to Participants */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
-            Benefits to Students
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-            {benefitsPoints.map((item) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="bg-black border border-[#ea4820] rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105"
-                >
-                  <div className="mb-4 p-3 bg-[#ea4820]/10 rounded-full group-hover:bg-[#ea4820]/20 transition-colors duration-300">
-                    <IconComponent
-                      size={32}
-                      className="text-[#ea4820] group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="text-base font-bold text-[#ea4820] mb-2 leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-white text-sm opacity-90 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        {/* Existing events/competitions content follows here */}
+        {/* Events/Competitions Section - Now First */}
         <div className="text-center mb-16">
-          <p className="text-gray-500 text-lg mb-4">Our Events</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
             UPCOMING <span className="text-[#FFD700]">EVENTS</span> &{" "}
             <span className="text-brand-cyan">COMPETITIONS</span>
@@ -157,7 +102,7 @@ const EventsSection = () => {
           <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {events.map((event, index) => (
             <div
               key={event.id}
@@ -196,6 +141,62 @@ const EventsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* What Makes the Legal Olympiad Different? */}
+        {/* <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
+            What Makes the Legal Olympiad Different?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {differentPoints.map((item) => (
+              <div
+                key={item.title}
+                className="bg-black border border-orange-800 rounded-xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white text-base opacity-90">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div> */}
+
+        {/* Benefits to Participants - Now Last */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
+            Benefits to Students
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefitsPoints.map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="bg-black border border-[#ea4820] rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105"
+                >
+                  <div className="mb-4 p-3 bg-[#ea4820]/10 rounded-full group-hover:bg-[#ea4820]/20 transition-colors duration-300">
+                    <IconComponent
+                      size={32}
+                      className="text-[#ea4820] group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-[#ea4820] mb-2 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-white text-sm opacity-90 leading-relaxed text-justify">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

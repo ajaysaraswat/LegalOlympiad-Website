@@ -21,23 +21,25 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "HOME", href: "/" },
-    { name: "ABOUT US", href: "/about" },
-    { name: "LEGAL-O", href: "/courses", hasDropdown: true },
-    { name: "UPCOMING EVENTS", href: "/events" },
-    { name: "SUBSCRIPTION", href: "/register" },
+    //{ name: "HOME", href: "/" },
+    { name: "ABOUT OLYMPIAD", href: "/about" },
+    { name: "CONTENT", href: "/courses", hasDropdown: true },
+    { name: "EDUCATION", href: "/education" },
+
+    //{ name: "UPCOMING EVENTS", href: "/events" },
+    //{ name: "SUBSCRIPTION", href: "/register" },
     // { name: "PAGES", href: "/pages" },
     // { name: "BLOG", href: "/blog" },
-    { name: "CONTACT US", href: "/contact" },
+    //{ name: "CONTACT US", href: "/contact" },
   ];
 
   const legalOServices = [
-    { name: "Olympiad", href: "/legal-o/olympiad" },
-    { name: "AI Tools", href: "/legal-o/ai-tools" },
-    { name: "Podcasts", href: "/legal-o/podcasts" },
-    { name: "Find a Mentor", href: "/legal-o/find-mentor" },
-    { name: "Subjects for Tomorrow", href: "/legal-o/subjects" },
-    { name: "Mentoring Sessions", href: "/legal-o/mentoring" },
+    //{ name: "Olympiad", href: "/legal-o/olympiad" },
+    { name: "BLOGS", href: "/blog" },
+    { name: "PODCASTS", href: "/legal-o/podcasts" },
+    // { name: "Find a Mentor", href: "/legal-o/find-mentor" },
+    // { name: "Subjects for Tomorrow", href: "/legal-o/subjects" },
+    // { name: "Mentoring Sessions", href: "/legal-o/mentoring" },
   ];
 
   // Handle Legal-O dropdown toggle for desktop

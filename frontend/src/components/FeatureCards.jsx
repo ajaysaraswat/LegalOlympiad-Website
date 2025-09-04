@@ -5,13 +5,13 @@ const features = [
     icon: Award,
     title: "Why LegalO",
     description:
-      "India's first national-level Legal Olympiad bridging the gap between theory and practice, empowering students with real-world legal skills and career direction.",
+      "Top ten students in the Olympiad will be give assistance in gaining internships at top tier law firms/ offices of Senior Advocates.",
     bgColor: "bg-gradient-to-br from-white to-gray-100",
     textColor: "text-black",
   },
   {
     icon: Users,
-    title: "Consulting Forum from Law Experts",
+    title: "Consulting Forum ",
     description:
       "Gain direct mentorship from serving and retired judges, senior advocates, lawyers, and professors to guide your legal journey.",
     bgColor: "bg-gradient-to-br from-black to-gray-800",
@@ -47,21 +47,18 @@ const FeatureCards = () => {
                 key={feature.title}
                 className={`${feature.bgColor} ${
                   feature.textColor
-                } p-6 sm:p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up stagger-${
+                } p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up stagger-${
                   index + 1
                 }`}
               >
-                <div className="mb-4 sm:mb-6 flex justify-center">
-                  <IconComponent
-                    size={36}
-                    className={`sm:w-12 sm:h-12 ${feature.textColor}`}
-                  />
+                <div className="mb-6 flex justify-center">
+                  <IconComponent size={48} className={`${feature.textColor}`} />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">
                   {feature.title}
                 </h3>
                 <p
-                  className={`text-xs sm:text-sm opacity-90 leading-relaxed ${feature.textColor}`}
+                  className={`text-sm sm:text-base opacity-90 leading-relaxed text-justify ${feature.textColor}`}
                 >
                   {feature.description}
                 </p>
