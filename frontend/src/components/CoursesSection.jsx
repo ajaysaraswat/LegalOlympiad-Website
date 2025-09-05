@@ -56,7 +56,7 @@ const services = [
   },
   {
     id: 5,
-    title: "Career Counselling & Networking Forums",
+    title: "Career Counselling & Networking",
     description:
       "Connect with legal professionals and get career guidance through exclusive networking events.",
     image: "/lawstudents.jpg",
