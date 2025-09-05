@@ -62,7 +62,7 @@ const differentPoints = [
 
 const benefitsPoints = [
   {
-    title: "Clarity in Specialization & Career Path",
+    title: "Clarity in Specialization and Career Path",
     description: "Find your strengths and ideal legal path for success.",
     icon: Target,
   },
