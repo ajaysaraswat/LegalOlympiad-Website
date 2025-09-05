@@ -15,45 +15,52 @@ const whyParticipate = [
   {
     title: "Bridge Knowledge",
     description:
-      "Bridge knowledge & passion through real legal problem-solving.",
+      "Bridge your knowledge and passion by solving complex legal challenges with guidance from experienced professionals, ensuring both practical insight and theoretical depth.",
     icon: Scale,
-    color: "text-blue-600",
-    bgGradient: "from-blue-50 to-blue-100",
-    borderColor: "border-blue-200",
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
   },
   {
     title: "Discover Your Niche",
     description:
-      "Discover your niche in criminal, corporate, IP, cyber, and environmental law.",
+      "Explore diverse domains such as criminal, corporate, intellectual property, cyber, and environmental law to identify your area of true professional interest and future growth.",
     icon: Search,
-    color: "text-green-600",
-    bgGradient: "from-green-50 to-green-100",
-    borderColor: "border-green-200",
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
   },
   {
     title: "Performance Card",
-    description: "Receive personalized scorecards highlighting your strengths.",
+    description:
+      "Receive detailed personalized scorecards highlighting your core strengths, improvement areas, and overall performance metrics to track your legal learning journey.",
     icon: BarChart3,
-    color: "text-purple-600",
-    bgGradient: "from-purple-50 to-purple-100",
-    borderColor: "border-purple-200",
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
   },
   {
     title: "Mentor Clinics",
-    description: "Access post-test mentor clinics with senior legal experts.",
+    description:
+      "Gain access to exclusive mentor clinics with senior advocates, professors, and legal experts, enabling one-on-one guidance to refine both skills and career strategy.",
     icon: GraduationCap,
-    color: "text-orange-600",
-    bgGradient: "from-orange-50 to-orange-100",
-    borderColor: "border-orange-200",
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
   },
   {
     title: "Recognition Trophies",
     description:
-      "Win recognition through scholarships, internships, and publications.",
+      "Earn recognition through scholarships, internships, and publication opportunities that build your credibility, strengthen your profile, and enhance your career prospects.",
     icon: Trophy,
-    color: "text-red-600",
-    bgGradient: "from-red-50 to-red-100",
-    borderColor: "border-red-200",
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
   },
 ];
 
@@ -81,75 +88,93 @@ const CategoriesSection = () => {
           }
         `}
       </style>
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-black to-gray-900 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 text-center">
               Why Choose Us?
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
               Join the Legal Olympiad and unlock your potential in the legal
               world
             </p>
-            <div className="w-16 sm:w-24 h-1 bg-[#ea4820] mx-auto mt-3 sm:mt-4"></div>
+            <div className="w-16 sm:w-24 h-1 bg-[#C6930A] mx-auto mt-3 sm:mt-4"></div>
           </div>
 
           {/* Infinite scrolling container */}
           <div className="relative overflow-hidden">
             <div className="scroll-container flex">
               {/* First set of cards */}
-              {whyParticipate.map((item, index) => {
+              {whyParticipate.map((item) => {
                 const IconComponent = item.icon;
                 return (
                   <div
                     key={`first-${item.title}`}
-                    className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 hover:border-opacity-60 backdrop-blur-sm`}
+                    className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-2xl hover:shadow-3xl transition-all duration-500 group hover:scale-105 hover:border-[#C6930A] backdrop-blur-sm`}
                   >
                     <div className="mb-6 flex justify-center">
-                      <IconComponent
-                        size={48}
-                        className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
-                      />
+                      <div className="p-3 bg-[#C6930A]/10 rounded-full group-hover:bg-[#C6930A]/20 transition-colors duration-300">
+                        <IconComponent
+                          size={40}
+                          className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
+                        />
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center group-hover:text-[#ea4820] transition-colors duration-300">
+                    <h3
+                      className={`text-lg sm:text-xl font-bold ${item.textColor} mb-4 text-center group-hover:text-[#C6930A] transition-colors duration-300`}
+                    >
                       {item.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-justify group-hover:text-gray-700 transition-colors duration-300">
+                    <p
+                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300`}
+                      style={{
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                      }}
+                    >
                       {item.description}
                     </p>
-                    <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#ea4820] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#C6930A] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                   </div>
                 );
               })}
 
               {/* Duplicate set for seamless infinite scroll */}
-              {whyParticipate.map((item, index) => {
+              {whyParticipate.map((item) => {
                 const IconComponent = item.icon;
                 return (
                   <div
                     key={`second-${item.title}`}
-                    className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105 hover:border-opacity-60 backdrop-blur-sm`}
+                    className={`flex-shrink-0 w-72 sm:w-80 mx-3 sm:mx-4 bg-gradient-to-br ${item.bgGradient} border-2 ${item.borderColor} rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-2xl hover:shadow-3xl transition-all duration-500 group hover:scale-105 hover:border-[#C6930A] backdrop-blur-sm`}
                   >
                     <div className="mb-6 flex justify-center">
-                      <IconComponent
-                        size={48}
-                        className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
-                      />
+                      <div className="p-3 bg-[#C6930A]/10 rounded-full group-hover:bg-[#C6930A]/20 transition-colors duration-300">
+                        <IconComponent
+                          size={40}
+                          className={`${item.color} group-hover:scale-110 transition-transform duration-300`}
+                        />
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center group-hover:text-[#ea4820] transition-colors duration-300">
+                    <h3
+                      className={`text-lg sm:text-xl font-bold ${item.textColor} mb-4 text-center group-hover:text-[#C6930A] transition-colors duration-300`}
+                    >
                       {item.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed text-justify group-hover:text-gray-700 transition-colors duration-300">
+                    <p
+                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300`}
+                      style={{
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                      }}
+                    >
                       {item.description}
                     </p>
-                    <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#ea4820] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="mt-6 w-12 h-1 bg-gradient-to-r from-transparent via-[#C6930A] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                   </div>
                 );
               })}
             </div>
           </div>
-
-          {/* Scroll indicator */}
         </div>
       </section>
     </>

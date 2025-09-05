@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white relative">
       <div className="container mx-auto px-4 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="slide-in-left">
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
@@ -104,7 +104,7 @@ const Footer = () => {
                   Upcoming Events
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/register"
                   onClick={handleLinkClick}
@@ -112,7 +112,7 @@ const Footer = () => {
                 >
                   Subscription
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"
@@ -120,69 +120,6 @@ const Footer = () => {
                   className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
                 >
                   Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal-O Services */}
-          <div className="slide-in-right stagger-2">
-            <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
-              Legal-O Services
-            </h3>
-            <ul className="space-y-2 sm:space-y-3">
-              <li>
-                <Link
-                  to="/legal-o/olympiad"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  Legal Olympiad
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/legal-o/ai-tools"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  AI Tools
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/legal-o/podcasts"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  Legal Podcasts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/legal-o/find-mentor"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  Find a Mentor
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/legal-o/subjects"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  Subjects for Tomorrow
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/legal-o/mentoring"
-                  onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
-                >
-                  Mentoring Sessions
                 </Link>
               </li>
             </ul>

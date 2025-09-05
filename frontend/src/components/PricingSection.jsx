@@ -62,12 +62,11 @@ const PricingSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-gray-500 text-lg mb-4">Awesome Packages</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-            SIMPLE ALL INCLUSIVE{" "}
-            <span className="text-orange-800">PRICING</span>
+          <p className="text-gray-500 text-base mb-4">Awesome Packages</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            SIMPLE ALL INCLUSIVE <span className="text-[#C6930A]">PRICING</span>
           </h2>
-          <div className="w-24 h-1 bg-orange-800 mx-auto mt-8"></div>
+          <div className="w-16 sm:w-24 h-1 bg-[#C6930A] mx-auto mt-3 sm:mt-4"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">

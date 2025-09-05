@@ -63,13 +63,13 @@ const differentPoints = [
 const benefitsPoints = [
   {
     title: "Clarity in Specialization & Career Path",
-    description:
-      "Discover your strengths and find your ideal legal specialization",
+    description: "Find your strengths and ideal legal path for success.",
     icon: Target,
   },
   {
     title: "Real-world Skill Development of Students",
-    description: "Develop practical legal skills through hands-on experience",
+    description:
+      "Gain real legal skills through interactive exercises and practice.",
     icon: Briefcase,
   },
   // {
@@ -79,12 +79,14 @@ const benefitsPoints = [
   // },
   {
     title: "Career Launchpad with Internship Opportunities",
-    description: "Access exclusive internships and career opportunities",
+    description:
+      "Get access to top law firm internships and job opportunities.",
     icon: Award,
   },
   {
     title: "National Recognition for CV & Job Applications",
-    description: "Boost your profile with nationally recognized achievements",
+    description:
+      "Gain competitive edge with recognized certifications and honors.",
     icon: Star,
   },
 ];
@@ -95,11 +97,11 @@ const EventsSection = () => {
       <div className="container mx-auto px-4">
         {/* Events/Competitions Section - Now First */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy">
-            UPCOMING <span className="text-[#FFD700]">EVENTS</span> &{" "}
-            <span className="text-brand-cyan">COMPETITIONS</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            UPCOMING <span className="text-[#C6930A]">EVENTS</span> &{" "}
+            <span className="text-[#C6930A]">COMPETITIONS</span>
           </h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto mt-8"></div>
+          <div className="w-16 sm:w-24 h-1 bg-[#C6930A] mx-auto mt-3 sm:mt-4"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -170,7 +172,7 @@ const EventsSection = () => {
 
         {/* Benefits to Participants - Now Last */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-8 text-center">
             Benefits to Students
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -179,18 +181,18 @@ const EventsSection = () => {
               return (
                 <div
                   key={item.title}
-                  className="bg-black border border-[#ea4820] rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105"
+                  className="bg-black border border-[#C6930A] rounded-xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105"
                 >
-                  <div className="mb-4 p-3 bg-[#ea4820]/10 rounded-full group-hover:bg-[#ea4820]/20 transition-colors duration-300">
+                  <div className="mb-3 p-2 bg-[#ea4820]/10 rounded-full group-hover:bg-[#ea4820]/20 transition-colors duration-300">
                     <IconComponent
-                      size={32}
-                      className="text-[#ea4820] group-hover:scale-110 transition-transform duration-300"
+                      size={28}
+                      className="text-[#C6930A] group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-base font-bold text-[#ea4820] mb-2 leading-tight">
+                  <h3 className="text-base font-bold text-[#C6930A] mb-2 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-white text-sm opacity-90 leading-relaxed text-justify">
+                  <p className="text-white text-sm opacity-90 leading-normal text-left sm:text-justify">
                     {item.description}
                   </p>
                 </div>

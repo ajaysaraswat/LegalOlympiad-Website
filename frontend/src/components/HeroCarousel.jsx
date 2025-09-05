@@ -45,7 +45,7 @@ const HeroSection = () => {
             <div className="flex flex-row gap-3 sm:gap-4">
               <Button
                 size="sm"
-                className="bg-orange-800 hover:bg-orange-800/90 text-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
+                className="bg-[#C6930A] hover:bg-orange-800/90 text-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                 onClick={() => navigate("/courses")}
               >
                 REGISTER NOW
