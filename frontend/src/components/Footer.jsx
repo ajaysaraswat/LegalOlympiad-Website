@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="slide-in-left">
             <div className="flex items-center gap-2 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#ea4820] rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#C6930A] rounded-full flex items-center justify-center">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white rounded-full"></div>
               </div>
               <span className="text-lg sm:text-xl font-bold">
@@ -134,7 +134,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 sm:gap-3">
                 <MapPin
                   size={16}
-                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#C6930A] mt-1 flex-shrink-0"
                 />
                 <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                   Address: C-18, Second floor, Pamposh Enclave, New Delhi -
@@ -144,7 +144,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 sm:gap-3">
                 <Phone
                   size={16}
-                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#C6930A] mt-1 flex-shrink-0"
                 />
                 <a
                   href="tel:+19748845246937"
@@ -156,7 +156,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 sm:gap-3">
                 <Mail
                   size={16}
-                  className="sm:w-5 sm:h-5 text-[#ea4820] mt-1 flex-shrink-0"
+                  className="sm:w-5 sm:h-5 text-[#C6930A] mt-1 flex-shrink-0"
                 />
                 <a
                   href="mailto:info@legalolympiad.com"
@@ -196,7 +196,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-[#ea4820] hover:bg-[#ea4820]/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-[#C6930A] hover:bg-[#ea4820]/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
       >
         <ArrowUp size={16} className="sm:w-5 sm:h-5" />
       </button>
