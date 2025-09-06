@@ -192,7 +192,7 @@ const EventsSection = () => {
                   <h3 className="text-base font-bold text-[#C6930A] mb-2 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-white text-sm opacity-90 leading-normal text-left sm:text-justify">
+                  <p className="text-white text-sm opacity-90 leading-normal text-center">
                     {item.description}
                   </p>
                 </div>
