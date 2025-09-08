@@ -39,7 +39,7 @@ const services = [
     title: "One-on-One Mentoring",
     description:
       "Direct mentorship from serving and retired judges, senior advocates, and professors.",
-    image: "/judge.jpg",
+    image: "/mentorship.webp",
     icon: UserCheck,
     features: ["Personal Guidance", "Expert Mentors", "Career Planning"],
     duration: "Flexible Sessions",
@@ -99,7 +99,7 @@ const ServicesSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               SERVICES WE OFFER
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-white sm:text-white">
+            <p className="text-sm sm:text-base md:text-lg text-[#C6930A] sm:text-[#C6930A]">
               Comprehensive legal services designed to empower your legal career
               journey.
             </p>
@@ -111,7 +111,7 @@ const ServicesSection = () => {
           </div> */}
         </div>
 
-        <div className="w-16 sm:w-24 h-1 bg-orange-800 mb-8 sm:mb-12"></div>
+        <div className="w-16 sm:w-24 h-1 bg-[#C6930A] mb-8 sm:mb-12"></div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
@@ -133,7 +133,7 @@ const ServicesSection = () => {
                         className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#ea4820] p-2 rounded-lg shadow-md">
+                      <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#C6930A] p-2 rounded-lg shadow-md">
                         <IconComponent size={20} className="text-white" />
                       </div>
                       <button
@@ -156,7 +156,7 @@ const ServicesSection = () => {
                 </div>
 
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-black mb-2 sm:mb-3 leading-tight group-hover:text-[#ea4820] transition-colors duration-300">
+                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-black mb-2 sm:mb-3 leading-tight group-hover:text-[#C6930A] transition-colors duration-300">
                     {service.title}
                   </h3>
 
@@ -168,14 +168,14 @@ const ServicesSection = () => {
                     {service.features.map((feature, idx) => (
                       <span
                         key={idx}
-                        className="text-xs bg-orange-100 text-[#ea4820] px-2 py-1 rounded-full"
+                        className="text-xs bg-orange-100 text-[#C6930A] px-2 py-1 rounded-full"
                       >
                         {feature}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm text-[#ea4820] font-medium">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-[#C6930A] font-medium">
                     <div className="flex items-center gap-1">
                       <Clock size={12} className="sm:w-4 sm:h-4" />
                       <span>{service.duration}</span>

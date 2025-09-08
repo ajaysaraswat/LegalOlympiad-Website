@@ -56,7 +56,7 @@ const Footer = () => {
               >
                 <Linkedin
                   size={18}
-                  className="sm:w-5 sm:h-5 hover:text-[#ea4820] cursor-pointer transition-colors bg-blue-700"
+                  className="sm:w-5 sm:h-5 hover:text-[#C6930A] cursor-pointer transition-colors bg-blue-700"
                 />
               </a>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <Link
                   to="/"
                   onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#C6930A] transition-colors"
                 >
                   Home
                 </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <Link
                   to="/about"
                   onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#C6930A] transition-colors"
                 >
                   About Us
                 </Link>
@@ -90,7 +90,7 @@ const Footer = () => {
                 <Link
                   to="/courses"
                   onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#C6930A] transition-colors"
                 >
                   Legal-O Services
                 </Link>
@@ -99,7 +99,7 @@ const Footer = () => {
                 <Link
                   to="/events"
                   onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#C6930A] transition-colors"
                 >
                   Upcoming Events
                 </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
                 <Link
                   to="/contact"
                   onClick={handleLinkClick}
-                  className="text-sm sm:text-base text-gray-300 hover:text-[#ea4820] transition-colors"
+                  className="text-sm sm:text-base text-gray-300 hover:text-[#C6930A] transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -148,7 +148,7 @@ const Footer = () => {
                 />
                 <a
                   href="tel:+19748845246937"
-                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors leading-relaxed"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#C6930A] transition-colors leading-relaxed"
                 >
                   +91-9999026602
                 </a>
@@ -160,7 +160,7 @@ const Footer = () => {
                 />
                 <a
                   href="mailto:info@legalolympiad.com"
-                  className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors leading-relaxed"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#C6930A] transition-colors leading-relaxed"
                 >
                   info@legalolympiad.com
                 </a>
@@ -178,14 +178,14 @@ const Footer = () => {
             <Link
               to="/privacy-policy"
               onClick={handleLinkClick}
-              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+              className="text-xs sm:text-sm text-gray-300 hover:text-[#C6930A] transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
               onClick={handleLinkClick}
-              className="text-xs sm:text-sm text-gray-300 hover:text-[#ea4820] transition-colors"
+              className="text-xs sm:text-sm text-gray-300 hover:text-[#C6930A] transition-colors"
             >
               Terms of Service
             </Link>
@@ -196,7 +196,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-[#C6930A] hover:bg-[#ea4820]/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-[#C6930A] hover:bg-[#C6930A]/90 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
       >
         <ArrowUp size={16} className="sm:w-5 sm:h-5" />
       </button>

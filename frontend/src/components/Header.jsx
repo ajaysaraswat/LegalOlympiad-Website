@@ -145,12 +145,12 @@ const Header = () => {
                         className="flex items-center gap-1 cursor-pointer touch-manipulation"
                         onClick={handleLegalOToggle}
                       >
-                        <span className="text-sm xl:text-base font-semibold transition-colors duration-200 text-black group-hover:text-[#ea4820]">
+                        <span className="text-sm xl:text-base font-semibold transition-colors duration-200 text-black group-hover:text-[#C6930A]">
                           {item.name}
                         </span>
                         <ChevronDown
                           size={16}
-                          className={`text-black group-hover:text-[#ea4820] transition-all duration-200 ${
+                          className={`text-black group-hover:text-[#C6930A] transition-all duration-200 ${
                             isDesktopLegalODropdownOpen ? "rotate-180" : ""
                           }`}
                         />
@@ -168,7 +168,7 @@ const Header = () => {
                             <Link
                               key={service.name}
                               to={service.href}
-                              className={`block px-4 py-3 text-sm text-white hover:bg-[#ea4820] hover:text-black transition-colors duration-200 touch-manipulation ${
+                              className={`block px-4 py-3 text-sm text-white hover:bg-[#C6930A] hover:text-black transition-colors duration-200 touch-manipulation ${
                                 index === 0 ? "rounded-t-lg" : ""
                               } ${
                                 index === legalOServices.length - 1
@@ -188,10 +188,10 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`text-sm xl:text-base font-semibold transition-colors duration-200 text-black hover:text-[#ea4820] flex items-center relative group`}
+                      className={`text-sm xl:text-base font-semibold transition-colors duration-200 text-black hover:text-[#C6930A] flex items-center relative group`}
                     >
                       {item.name}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ea4820] transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C6930A] transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                   )}
                 </div>
@@ -202,7 +202,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-black hover:text-[#ea4820] hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
+              className="lg:hidden text-black hover:text-[#C6930A] hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -218,7 +218,7 @@ const Header = () => {
                     {item.hasDropdown ? (
                       <div>
                         <button
-                          className={`w-full text-left text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-4 px-4 flex items-center justify-between ${
+                          className={`w-full text-left text-base font-semibold transition-colors text-white hover:text-[#C6930A] py-4 px-4 flex items-center justify-between ${
                             index === navigation.length - 1
                               ? ""
                               : "border-b border-gray-700"
@@ -237,12 +237,12 @@ const Header = () => {
                         </button>
                         {/* Mobile Dropdown */}
                         {isLegalODropdownOpen && (
-                          <div className="bg-gray-900 border-l-4 border-[#ea4820]">
+                          <div className="bg-gray-900 border-l-4 border-[#C6930A]">
                             {legalOServices.map((service, serviceIndex) => (
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block text-sm text-white hover:text-[#ea4820] py-3 px-8 border-b border-gray-700 last:border-b-0 transition-colors duration-200"
+                                className="block text-sm text-white hover:text-[#C6930A] py-3 px-8 border-b border-gray-700 last:border-b-0 transition-colors duration-200"
                                 onClick={() => {
                                   setIsMenuOpen(false);
                                   setIsLegalODropdownOpen(false);
@@ -257,7 +257,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`text-base font-semibold transition-colors text-white hover:text-[#ea4820] py-3 px-4 block ${
+                        className={`text-base font-semibold transition-colors text-white hover:text-[#C6930A] py-3 px-4 block ${
                           index === navigation.length - 1
                             ? ""
                             : "border-b border-gray-700"

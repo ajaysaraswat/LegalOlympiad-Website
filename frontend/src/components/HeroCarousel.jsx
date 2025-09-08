@@ -32,7 +32,7 @@ const HeroSection = () => {
       >
         <div className="container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl slide-in-left">
-            <p className="text-[#ea4820] text-sm sm:text-base md:text-lg font-medium mb-2 sm:mb-4">
+            <p className="text-[#C6930A] text-sm sm:text-base md:text-lg font-medium mb-2 sm:mb-4">
               Your Path to Legal Success Starts Here.
             </p>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">

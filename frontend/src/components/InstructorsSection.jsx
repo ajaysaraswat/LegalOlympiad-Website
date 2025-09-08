@@ -88,7 +88,7 @@ const InstructorsSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 text-center">
             Meet Our <span className="text-[#C6930A]">Leadership Team</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-justify">
+          <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed text-center">
             The Legal Olympiad is led by a dedicated team of legal
             professionals, educators, and innovators committed to transforming
             legal education. Together, we bring diverse expertise to create

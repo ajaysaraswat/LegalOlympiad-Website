@@ -58,7 +58,7 @@ const FeatureCards = () => {
                   {feature.title}
                 </h3>
                 <p
-                  className={`text-sm sm:text-base opacity-90 leading-tight text-justify ${feature.textColor}`}
+                  className={`text-sm sm:text-base opacity-90 leading-tight text-center ${feature.textColor}`}
                 >
                   {feature.description}
                 </p>
