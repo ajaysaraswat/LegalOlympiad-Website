@@ -40,7 +40,7 @@ body {
 /* Better focus states for accessibility */
 button:focus,
 a:focus {
-  outline: 2px solid #ea580c;
+  outline: 2px solid #c6930a;
   outline-offset: 2px;
 }
 

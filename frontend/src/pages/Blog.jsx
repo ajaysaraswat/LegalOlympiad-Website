@@ -7,13 +7,13 @@ const Blog = () => {
       <Header />
 
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-green-500 to-brand-cyan text-white">
+      <section className="py-20 bg-gradient-to-r from-[#C6930A] to-[#C6930A] text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="slide-in-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-black font-bold mb-6">
               Blog
             </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl text-grey-500 opacity-90 max-w-3xl mx-auto">
               Stay updated with the latest insights and trends in online
               education
             </p>

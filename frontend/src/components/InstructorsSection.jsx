@@ -4,7 +4,7 @@ const instructors = [
     name: "Vineet Sharma",
     role: "Founder",
     image: "/Vineet.webp",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Leading the vision and strategic direction of Legal Olympiad",
   },
   {
@@ -12,7 +12,7 @@ const instructors = [
     name: "Sanjana Wadhwa",
     role: "Co-Founder",
     image: "/sanjanO.webp",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Driving innovation in legal education and mentorship",
   },
   {
@@ -20,7 +20,7 @@ const instructors = [
     name: "Siraj Abbasi",
     role: "Co-Founder",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Expert in legal practice and curriculum development",
   },
   {
@@ -28,7 +28,7 @@ const instructors = [
     name: "XXXX",
     role: "XXXX",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Specializing in legal technology and digital transformation",
   },
   {
@@ -36,7 +36,7 @@ const instructors = [
     name: "Praveen Sharma",
     role: "Co-Founder",
     image: "/judge.jpg",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Bringing judicial expertise and legal insights",
   },
   {
@@ -44,7 +44,7 @@ const instructors = [
     name: "Vikas Gogne",
     role: "Co-Founder",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Leading corporate law and business development",
   },
   {
@@ -52,7 +52,7 @@ const instructors = [
     name: "Satyam Chaturvedi",
     role: "Co-Founder",
     image: "/lawyer_photo.jpg",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Expert in constitutional law and public policy",
   },
   {
@@ -60,7 +60,7 @@ const instructors = [
     name: "Tithika Mittal",
     role: "Technology Ecosystem Coordinator",
     image: "/tithika.webp",
-    roleColor: "text-[#ea4820]",
+    roleColor: "text-[#C6930A]",
     description: "Orchestrating technology integration and digital platforms",
   },
 ];
@@ -133,7 +133,7 @@ const InstructorsSection = () => {
                 <div className="p-4 sm:p-4 lg:p-6 flex-grow flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-3 gap-2">
-                      <h3 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300 flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-[#C6930A] transition-colors duration-300 flex-1 min-w-0">
                         {instructor.name}
                       </h3>
                       {/* LinkedIn Icon - Always Visible */}
@@ -156,7 +156,7 @@ const InstructorsSection = () => {
                 </div>
 
                 {/* Decorative Element */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C6930A] to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
             </div>
           ))}
