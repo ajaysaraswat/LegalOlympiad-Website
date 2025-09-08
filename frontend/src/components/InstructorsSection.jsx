@@ -150,7 +150,7 @@ const InstructorsSection = () => {
                     <p
                       className={`${instructor.roleColor} font-semibold text-sm sm:text-sm mb-3 sm:mb-3`}
                     >
-                      {instructor.role}
+                      {instructor.description}
                     </p>
                   </div>
                 </div>

@@ -162,7 +162,7 @@ const Footer = () => {
                   href="mailto:info@legalolympiad.com"
                   className="text-xs sm:text-sm text-gray-300 hover:text-[#C6930A] transition-colors leading-relaxed"
                 >
-                  info@legalolympiad.com
+                  Partner@legalolympiad.com
                 </a>
               </div>
             </div>

@@ -133,10 +133,10 @@ export default function TermsOfService() {
           </p>
           <p className="mt-2 text-white">
             <a
-              href="mailto:info@legalolympiad.com"
+              href="mailto:Partner@legalolympiad.com"
               className="text-[#EA6220] underline hover:text-[#EA6220]/80 transition-colors"
             >
-              info@legalolympiad.com
+              Partner@legalolympiad.com
             </a>
           </p>
         </Section>

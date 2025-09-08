@@ -146,10 +146,10 @@ export default function PrivacyPolicy() {
           <p className="mt-2 text-white">
             You can contact us at{" "}
             <a
-              href="mailto:info@legalolympiad.com"
+              href="mailto:Partner@legalolympiad.com"
               className="text-[#EA6220] underline hover:text-[#EA6220]/80 transition-colors"
             >
-              info@legalolympiad.com
+              Partner@legalolympiad.com
             </a>{" "}
             or through the Privacy Dashboard (coming soon). We respond within 15
             working days.
@@ -213,10 +213,10 @@ export default function PrivacyPolicy() {
           <address className="not-italic mt-2 text-white">
             Email:{" "}
             <a
-              href="mailto:info@legalolympiad.com"
+              href="mailto:Partner@legalolympiad.com"
               className="text-[#EA6220] underline hover:text-[#EA6220]/80 transition-colors"
             >
-              info@legalolympiad.com
+              Partner@legalolympiad.com
             </a>
             <br />
             Address: C-18, Second floor, Pamposh Enclave,
