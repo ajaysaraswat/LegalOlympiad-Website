@@ -10,13 +10,13 @@ const About = () => {
       <Header />
 
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-orange-800 to-orange-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#C6930A] to-orange-500 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="slide-in-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
               About LegalOlympiad
             </h1>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl  max-w-3xl mx-auto ">
               Discover our mission to transform education through innovative
               online learning experiences
             </p>

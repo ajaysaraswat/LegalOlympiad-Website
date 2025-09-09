@@ -27,7 +27,7 @@ const Header = () => {
     { name: "EDUCATION", href: "/courses" },
 
     //{ name: "UPCOMING EVENTS", href: "/events" },
-    //{ name: "SUBSCRIPTION", href: "/register" },
+    { name: "Register", href: "/register", isButton: true },
     // { name: "PAGES", href: "/pages" },
     // { name: "BLOG", href: "/blog" },
     //{ name: "CONTACT US", href: "/contact" },
@@ -185,6 +185,13 @@ const Header = () => {
                         </div>
                       </div>
                     </>
+                  ) : item.isButton ? (
+                    <Link
+                      to={item.href}
+                      className="bg-[#C6930A] hover:bg-[#C6930A]/90 text-white px-4 py-2 rounded-lg text-sm xl:text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    >
+                      {item.name}
+                    </Link>
                   ) : (
                     <Link
                       to={item.href}
@@ -254,6 +261,14 @@ const Header = () => {
                           </div>
                         )}
                       </div>
+                    ) : item.isButton ? (
+                      <Link
+                        to={item.href}
+                        className="bg-[#C6930A] hover:bg-[#C6930A]/90 text-white py-3 px-4 rounded-lg text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg block text-center"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
                     ) : (
                       <Link
                         to={item.href}

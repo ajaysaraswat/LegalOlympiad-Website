@@ -29,8 +29,8 @@ const ContactSection = () => {
             icon={<Mail className="w-8 h-8" />}
             title="Email Us"
             description="Reach out directly to our support team"
-            actionText="connect@instrek.com"
-            actionHref="mailto:connect@instrek.com?subject=Inquiry from Instrek Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
+            actionText="Partner@legalolympiad.com"
+            actionHref="mailto:Partner@legalolympiad.com?subject=Inquiry from Instrek Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
           />
 
           <ContactCard
