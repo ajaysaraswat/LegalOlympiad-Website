@@ -122,7 +122,7 @@ const ServicesSection = () => {
                 key={service.id}
                 className={`bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group fade-in-up stagger-${
                   (index % 3) + 1
-                } hover:scale-105`}
+                } hover:scale-105 flex flex-col h-full`}
               >
                 <div className="relative overflow-hidden">
                   <div className="p-2 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg m-2">
@@ -155,36 +155,48 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-black mb-2 sm:mb-3 leading-tight group-hover:text-[#C6930A] transition-colors duration-300">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1 mb-3 sm:mb-4">
-                    {service.features.map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className="text-xs bg-orange-100 text-[#C6930A] px-2 py-1 rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                <div className="p-4 sm:p-6 flex flex-col ">
+                  {/* Title Section */}
+                  <div className="mb-3 min-h-[3rem] flex items-start">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-black leading-tight group-hover:text-[#C6930A] transition-colors duration-300">
+                      {service.title}
+                    </h3>
                   </div>
 
-                  <div className="flex items-center justify-between text-xs sm:text-sm text-[#C6930A] font-medium">
-                    <div className="flex items-center gap-1">
-                      <Clock size={12} className="sm:w-4 sm:h-4" />
-                      <span>{service.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star size={12} className="sm:w-4 sm:h-4" />
-                      <span>Premium Service</span>
+                  {/* Description Section */}
+                  <div className="mb-4 min-h-[4rem] flex items-start">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Features Section */}
+                  <div className="mb-4 min-h-[0.5rem] flex items-start">
+                    <div className="flex flex-nowrap gap-0.5 overflow-x-auto">
+                      {service.features.map((feature, idx) => (
+                        <span
+                          key={idx}
+                          className="text-xs bg-orange-100 text-[#C6930A] px-1.5 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+                        >
+                          {feature}
+                        </span>
+                      ))}
                     </div>
                   </div>
+
+                  {/* Bottom Info Section */}
+                  {/* <div className="mt-auto">
+                    <div className="flex items-center justify-between text-xs sm:text-sm text-[#C6930A] font-medium">
+                      <div className="flex items-center gap-1">
+                        <Clock size={12} className="sm:w-4 sm:h-4" />
+                        <span>{service.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star size={12} className="sm:w-4 sm:h-4" />
+                        <span>Premium Service</span>
+                      </div>
+                    </div>
+                  </div> */}
                 </div>
               </div>
             );
