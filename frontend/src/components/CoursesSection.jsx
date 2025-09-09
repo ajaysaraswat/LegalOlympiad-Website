@@ -51,8 +51,8 @@ const services = [
       "Future-ready legal domains including cyber law, AI law, and emerging legal fields.",
     image: "/hero3.jpg",
     icon: BookOpen,
-    features: ["Future Tech", "Emerging Laws", "Innovation"],
-    duration: "Updated Regularly",
+    features: ["Future Technology", "Emerging Laws", "Innovation"],
+    duration: "Regular Update",
   },
   {
     id: 5,
@@ -72,7 +72,7 @@ const services = [
     image: "/supreme.jpg",
     icon: Gavel,
     features: ["Court Skills", "Case Analysis", "Practical Training"],
-    duration: "Intensive Program",
+    duration: "Workshop",
   },
 ];
 
@@ -171,12 +171,12 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Features Section */}
-                  <div className="mb-4 min-h-[0.5rem] flex items-start">
-                    <div className="flex flex-nowrap gap-0.5 overflow-x-auto">
+                  <div className="mb-4 min-h-[2.5rem] flex items-start">
+                    <div className="flex flex-wrap gap-1">
                       {service.features.map((feature, idx) => (
                         <span
                           key={idx}
-                          className="text-xs bg-orange-100 text-[#C6930A] px-1.5 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+                          className="text-xs bg-orange-100 text-[#C6930A] px-2 py-1 rounded-full"
                         >
                           {feature}
                         </span>
@@ -185,7 +185,7 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Bottom Info Section */}
-                  {/* <div className="mt-auto">
+                  <div className="mt-auto">
                     <div className="flex items-center justify-between text-xs sm:text-sm text-[#C6930A] font-medium">
                       <div className="flex items-center gap-1">
                         <Clock size={12} className="sm:w-4 sm:h-4" />
@@ -196,7 +196,7 @@ const ServicesSection = () => {
                         <span>Premium Service</span>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             );
