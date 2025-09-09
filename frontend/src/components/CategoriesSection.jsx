@@ -126,11 +126,7 @@ const CategoriesSection = () => {
                       {item.title}
                     </h3>
                     <p
-                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300`}
-                      style={{
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                      }}
+                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300 text-center`}
                     >
                       {item.description}
                     </p>
@@ -161,11 +157,7 @@ const CategoriesSection = () => {
                       {item.title}
                     </h3>
                     <p
-                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300`}
-                      style={{
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                      }}
+                      className={`text-sm sm:text-base ${item.textColor} opacity-90 leading-relaxed group-hover:opacity-100 transition-all duration-300 text-center`}
                     >
                       {item.description}
                     </p>
