@@ -121,16 +121,16 @@ const HeroCarousel = () => {
                   className="bg-[#C6930A] hover:bg-[#C6930A] text-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                   onClick={() => navigate("/courses")}
                 >
-                  VIEW COURSE
+                  Register Now
                 </Button>
-                <Button
+                {/* <Button
                   size="sm"
                   variant="outline"
                   className="border-white text-white hover:text-[#C6930A] hover:bg-white text-xs sm:text-sm w-32 sm:w-auto px-4 sm:px-6"
                   onClick={() => navigate("/register")}
                 >
                   GET STARTED
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
