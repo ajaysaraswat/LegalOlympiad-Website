@@ -32,7 +32,7 @@ const slides = [
     tagline: "LEARN FROM THE BEST",
     title: "INDUSTRY EXPERTS AT YOUR FINGERTIPS",
     description:
-      " It's a battlefield of ideas, a crucible of conviction, and a launchpad for changemakers.",
+      " It's a battlefield of ideas, a test of conviction, and a launchpad for changemakers.",
     image: {
       mobile: "/heroImg.jpg",
       desktop: "/heroImg.jpg",

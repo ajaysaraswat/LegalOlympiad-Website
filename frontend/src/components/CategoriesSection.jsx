@@ -62,6 +62,16 @@ const whyParticipate = [
     borderColor: "border-[#C6930A]",
     textColor: "text-white",
   },
+  {
+    title: "Train for Tomorrow",
+    description:
+      "Go beyond the standard curriculum. A challenge and an opportunity to learn today what will serve you in the years ahead.",
+    icon: Target,
+    color: "text-[#C6930A]",
+    bgGradient: "from-black to-gray-900",
+    borderColor: "border-[#C6930A]",
+    textColor: "text-white",
+  },
 ];
 
 const CategoriesSection = () => {

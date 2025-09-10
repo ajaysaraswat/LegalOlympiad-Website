@@ -1,9 +1,9 @@
-import { Award, Users, Gavel, FileText } from "lucide-react";
+import { Award, Users, Gavel, FileText, Settings } from "lucide-react";
 
 const features = [
   {
     icon: Award,
-    title: "Why LegalO",
+    title: "Introduction to the legal field",
     description:
       "Top ten students in the Olympiad will be given assistance in gaining internships at top tier law firms and offices of Senior Advocates across the country.",
     bgColor: "bg-gradient-to-br from-white to-gray-100",
@@ -33,13 +33,27 @@ const features = [
     bgColor: "bg-gradient-to-br from-black to-gray-800",
     textColor: "text-white",
   },
+  {
+    icon: Settings,
+    title: "Policy Making",
+    description:
+      "Legal Olympiad helps shift the view of law from rigid rules to a policy-making framework, building skills to design laws that achieve real social outcomes.",
+    bgColor: "bg-gradient-to-br from-white to-gray-100",
+    textColor: "text-black",
+  },
 ];
 
 const FeatureCards = () => {
   return (
     <section className="py-12 sm:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Why LegalO
+          </h2>
+          <div className="w-16 h-1 bg-[#C6930A] mx-auto"></div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
