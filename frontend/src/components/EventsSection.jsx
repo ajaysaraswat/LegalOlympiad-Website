@@ -13,10 +13,10 @@ const events = [
   {
     id: 1,
     title: "OLYMPIAD EXAM 2025 ",
-    date: "10 DEC",
+    date: "9 Nov",
     time: "10AM",
     location: "NEW DELHI",
-    image: "/Webinar1.png",
+    image: "/Webinar1U.png",
   },
   {
     id: 2,
