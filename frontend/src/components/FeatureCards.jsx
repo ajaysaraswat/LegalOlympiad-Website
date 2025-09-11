@@ -11,7 +11,7 @@ const features = [
   },
   {
     icon: Users,
-    title: "Consulting Forum ",
+    title: "Consulting\nForum ",
     description:
       "Get mentorship from experienced judges, senior advocates, lawyers, and professors to guide your legal journey and career growth.",
     bgColor: "bg-gradient-to-br from-black to-gray-800",
@@ -19,7 +19,7 @@ const features = [
   },
   {
     icon: Gavel,
-    title: "Court Craft",
+    title: "Court\nCraft",
     description:
       "Train in courtroom skills, advocacy techniques, and legal processes with immersive workshops and practice sessions.",
     bgColor: "bg-gradient-to-br from-white to-gray-100",
@@ -27,7 +27,7 @@ const features = [
   },
   {
     icon: FileText,
-    title: "Judgement Appreciation",
+    title: "Judgement\nAppreciation",
     description:
       "Strengthen your legal reasoning by analyzing landmark judgments and their impact on law and society.",
     bgColor: "bg-gradient-to-br from-black to-gray-800",
@@ -35,7 +35,7 @@ const features = [
   },
   {
     icon: Settings,
-    title: "Policy Making",
+    title: "Policy\nMaking",
     description:
       "Legal Olympiad helps shift the view of law from rigid rules to a policy-making framework, building skills to design laws that achieve real social outcomes.",
     bgColor: "bg-gradient-to-br from-white to-gray-100",
@@ -70,7 +70,7 @@ const FeatureCards = () => {
                 </div>
                 <div className="flex-1 flex flex-col justify-between">
                   <div className="mb-3">
-                    <h3 className="text-base sm:text-lg font-bold text-center min-h-[3.5rem] flex items-center justify-center">
+                    <h3 className="text-base sm:text-lg font-bold text-center min-h-[3.5rem] flex items-center justify-center whitespace-pre-line">
                       {feature.title}
                     </h3>
                   </div>

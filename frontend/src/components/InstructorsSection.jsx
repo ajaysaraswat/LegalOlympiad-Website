@@ -42,7 +42,7 @@ const instructors = [
   {
     id: 6,
     name: "Vikas Gogne",
-    role: "Co-Founder",
+    role: "Student Mentor",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#C6930A]",
     description: "Leading corporate law and business development",
@@ -50,7 +50,7 @@ const instructors = [
   {
     id: 7,
     name: "Satyam Chaturvedi",
-    role: "Co-Founder",
+    role: "Student Mentor",
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#C6930A]",
     description: "Expert in constitutional law and public policy",
