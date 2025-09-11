@@ -152,7 +152,7 @@ const HeroCarousel = () => {
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -161,7 +161,7 @@ const HeroCarousel = () => {
               setIsAutoPlay(false);
               setTimeout(() => setIsAutoPlay(true), 10000);
             }}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 carousel-dot ${
               index === currentSlide ? "bg-[#C6930A] scale-125" : "bg-white/50"
             }`}
           />

@@ -20,6 +20,12 @@
     min-width: 44px;
   }
 
+  /* Exception for carousel dots - they should be small */
+  .carousel-dot {
+    min-height: unset !important;
+    min-width: unset !important;
+  }
+
   /* Better spacing for mobile */
   .container {
     padding-left: 1rem;

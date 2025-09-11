@@ -61,7 +61,7 @@ const ContactCard = ({
 
   return (
     <div
-      className="bg-white hover:bg-gray-50 rounded-2xl border border-gray-200 p-8 text-center hover:shadow-xl transition-all duration-300 hover:border-gray-300 cursor-pointer transform hover:scale-105 flex flex-col h-full"
+      className="bg-white hover:bg-[#f5e4b7] rounded-2xl border border-gray-200 p-8 text-center hover:shadow-xl transition-all duration-300 hover:border-gray-300 cursor-pointer transform hover:scale-105 flex flex-col h-full"
       onClick={handleCardClick}
     >
       <div className="w-20 h-20 bg-gray-100 hover:bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300">
@@ -77,7 +77,7 @@ const ContactCard = ({
       </p>
 
       <div className="mt-auto">
-        <div className="block bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-md transform hover:scale-105 text-center">
+        <div className="block bg-[#C6930A] hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-md transform hover:scale-105 text-center">
           {actionText}
         </div>
       </div>

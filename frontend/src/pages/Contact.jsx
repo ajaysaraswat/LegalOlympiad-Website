@@ -30,13 +30,13 @@ const ContactSection = () => {
             title="Email Us"
             description="Reach out directly to our support team"
             actionText="Partner@legalolympiad.com"
-            actionHref="mailto:Partner@legalolympiad.com?subject=Inquiry from Instrek Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
+            actionHref="mailto:Partner@legalolympiad.com?subject=Inquiry from LegalO Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
           />
 
           <ContactCard
             icon={<Calendar className="w-8 h-8" />}
             title="Schedule a Demo"
-            description="Schedule a demo meeting - both you and Instrek will receive calendar invites"
+            description="Schedule a demo meeting - both you and Legal-O will receive calendar invites"
             actionText="Schedule Demo"
             isButton={true}
           />

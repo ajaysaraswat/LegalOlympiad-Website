@@ -63,19 +63,25 @@ const FeatureCards = () => {
                   feature.textColor
                 } p-6 text-center hover:scale-105 transition-transform duration-300 fade-in-up stagger-${
                   index + 1
-                }`}
+                } flex flex-col`}
               >
                 <div className="mb-4 flex justify-center">
                   <IconComponent size={40} className={`${feature.textColor}`} />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold mb-3 text-center min-h-[3rem] flex items-center justify-center">
-                  {feature.title}
-                </h3>
-                <p
-                  className={`text-sm sm:text-base opacity-90 leading-tight text-center ${feature.textColor}`}
-                >
-                  {feature.description}
-                </p>
+                <div className="flex-1 flex flex-col justify-between">
+                  <div className="mb-3">
+                    <h3 className="text-base sm:text-lg font-bold text-center min-h-[3.5rem] flex items-center justify-center">
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <div className="flex-1 flex items-start">
+                    <p
+                      className={`text-sm sm:text-base opacity-90 leading-tight text-center ${feature.textColor}`}
+                    >
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}
