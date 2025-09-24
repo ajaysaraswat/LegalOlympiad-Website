@@ -16,7 +16,7 @@ const events = [
     date: "9 Nov",
     time: "10AM",
     location: "NEW DELHI",
-    image: "/Webinar1U.png",
+    image: "/event3.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const events = [
     date: "15 DEC",
     time: "11AM",
     location: "WORLDWIDE",
-    image: "/Webinar2.png",
+    image: "/event1.png",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const events = [
     date: "20 DEC",
     time: "10AM",
     location: "WORLDWIDE",
-    image: "/Webinar3.jpg",
+    image: "/event2.png",
   },
 ];
 
