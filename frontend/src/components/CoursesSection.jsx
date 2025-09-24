@@ -19,7 +19,7 @@ const services = [
     title: "AI-powered Legal Career Guidance",
     description:
       "Get personalized career guidance using advanced AI technology to map your legal journey.",
-    image: "/hero1.jpg",
+    image: "/AIpowered.jpg",
     icon: Brain,
     features: ["AI Analysis", "Career Mapping", "Skill Assessment"],
     duration: "Ongoing Support",
@@ -29,7 +29,7 @@ const services = [
     title: "Legal Podcasts With Experts",
     description:
       "Access exclusive legal podcasts featuring industry experts and thought leaders.",
-    image: "/hero2.jpg",
+    image: "/podcasts.jpg",
     icon: Headphones,
     features: ["Expert Insights", "Latest Updates", "Case Studies"],
     duration: "Weekly Episodes",
@@ -39,7 +39,7 @@ const services = [
     title: "One-on-One Mentoring",
     description:
       "Direct mentorship from serving and retired judges, senior advocates, and professors.",
-    image: "/mentorship.webp",
+    image: "/mentoring.jpg",
     icon: UserCheck,
     features: ["Personal Guidance", "Expert Mentors", "Career Planning"],
     duration: "Flexible Sessions",
@@ -49,7 +49,7 @@ const services = [
     title: "Subjects for Tomorrow",
     description:
       "Future-ready legal domains including cyber law, AI law, and emerging legal fields.",
-    image: "/hero3.jpg",
+    image: "/subjects.jpg",
     icon: BookOpen,
     features: ["Future Technology", "Emerging Laws", "Innovation"],
     duration: "Regular Update",
@@ -59,7 +59,7 @@ const services = [
     title: "Career Counselling & Networking",
     description:
       "Connect with legal professionals and get career guidance through exclusive networking events.",
-    image: "/lawstudents.jpg",
+    image: "/career.jpg",
     icon: Network,
     features: ["Networking", "Career Advice", "Industry Connect"],
     duration: "Monthly Events",
@@ -69,7 +69,7 @@ const services = [
     title: "Court Craft & Judgement Appreciation",
     description:
       "Master courtroom skills and analyze landmark judgments for practical legal understanding.",
-    image: "/supreme.jpg",
+    image: "/court.jpg",
     icon: Gavel,
     features: ["Court Skills", "Case Analysis", "Practical Training"],
     duration: "Workshop",

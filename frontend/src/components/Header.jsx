@@ -27,7 +27,7 @@ const Header = () => {
     { name: "EDUCATION", href: "/courses" },
 
     //{ name: "UPCOMING EVENTS", href: "/events" },
-    { name: "Login/Register", href: "/register", isButton: true },
+    //{ name: "Login/Register", href: "/register", isButton: true },
     // { name: "PAGES", href: "/pages" },
     // { name: "BLOG", href: "/blog" },
     //{ name: "CONTACT US", href: "/contact" },

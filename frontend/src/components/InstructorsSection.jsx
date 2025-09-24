@@ -6,6 +6,8 @@ const instructors = [
     image: "/Vineet.webp",
     roleColor: "text-[#C6930A]",
     description: "Leading the vision and strategic direction of Legal Olympiad",
+    linkedin:
+      "https://in.linkedin.com/in/vinksharma?original_referer=https%3A%2F%2Fwww.bing.com%2F",
   },
   {
     id: 2,
@@ -14,38 +16,39 @@ const instructors = [
     image: "/sanjanO.webp",
     roleColor: "text-[#C6930A]",
     description: "Driving innovation in legal education and mentorship",
+    linkedin:
+      "https://in.linkedin.com/in/sanjanawadhwa94?original_referer=https%3A%2F%2Fwww.bing.com%2F",
   },
+
   {
     id: 3,
-    name: "Siraj Abbasi",
-    role: "Co-Founder",
-    image: "/lawyer_photo.jpg",
-    roleColor: "text-[#C6930A]",
-    description: "Expert in legal practice and curriculum development",
-  },
-  {
-    id: 4,
     name: "Adnan Abbasi",
-    role: "XXXX",
+    role: "AI Advisor",
     image: "/Adnan.png",
     roleColor: "text-[#C6930A]",
     description: "Specializing in legal technology and digital transformation",
+    linkedin:
+      "https://www.linkedin.com/in/adnan-abbasi-bb659a116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 5,
+    id: 4,
     name: "Praveen Sharma",
-    role: "Co-Founder",
+    role: "Business Advisor",
     image: "/praveen.JPG",
     roleColor: "text-[#C6930A]",
     description: "Bringing judicial expertise and legal insights",
+    linkedin:
+      "https://www.linkedin.com/in/praveen-sharma-640086209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    id: 6,
+    id: 5,
     name: "Tithika Mittal",
     role: "Technology Ecosystem Coordinator",
     image: "/tithika.webp",
     roleColor: "text-[#C6930A]",
     description: "Orchestrating technology integration and digital platforms",
+    linkedin:
+      "https://in.linkedin.com/in/tithika-mittal-504775321?original_referer=https%3A%2F%2Fwww.bing.com%2F",
   },
 ];
 
@@ -57,6 +60,8 @@ const studentMentors = [
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#C6930A]",
     description: "",
+    linkedin:
+      "https://www.linkedin.com/in/vikas-gogne-42918527?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     id: 2,
@@ -65,6 +70,8 @@ const studentMentors = [
     image: "/lawyer_photo.jpg",
     roleColor: "text-[#C6930A]",
     description: "",
+    linkedin:
+      "https://www.linkedin.com/in/satyam-chaturvedi-18845171?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
 ];
 
@@ -108,16 +115,25 @@ const TeamMemberCard = ({ member, index }) => (
             <h3 className="text-lg sm:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-[#C6930A] transition-colors duration-300 flex-1 min-w-0">
               {member.name}
             </h3>
-            {/* LinkedIn Icon - Always Visible */}
-            <button className="w-7 h-7 sm:w-7 sm:h-7 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-              <svg
-                className="w-4 h-4 sm:w-4 sm:h-4 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+            {/* LinkedIn Icon - Shown only if LinkedIn URL exists */}
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-7 h-7 sm:w-7 sm:h-7 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-300 flex-shrink-0"
+                aria-label={`Open ${member.name}'s LinkedIn profile`}
+                title={`Open ${member.name}'s LinkedIn profile`}
               >
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </button>
+                <svg
+                  className="w-4 h-4 sm:w-4 sm:h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+            )}
           </div>
           <p
             className={`${member.roleColor} font-semibold text-sm sm:text-sm mb-3 sm:mb-3`}
